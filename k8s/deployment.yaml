@@ -1,0 +1,28 @@
+#apiVersion: extensions/v1beta1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wengal-user-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wengal-user
+  template:
+    metadata:
+      labels:
+        app: wengal-user
+    spec:
+      containers:
+        - name: wengal-user
+          image: AWS_ECR_URI
+#          image: 003144002265.dkr.ecr.ap-northeast-2.amazonaws.com/gajoa-test-project:v1
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          env:
+            - name: DATE
+              value: 'DATE_STRING'
+              #          image: AWS_ECR_URI
+#      imagePullSecrets:
+#        - name: my-secret

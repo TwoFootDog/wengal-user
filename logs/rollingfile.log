@@ -1,0 +1,6 @@
+[INFO ] 2020-04-08 00:09:30.263 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user'
+[INFO ] 2020-04-08 00:09:30.269 [main] WengalUserApplication - Started WengalUserApplication in 2.79 seconds (JVM running for 4.556)
+[INFO ] 2020-04-08 00:11:48.310 [http-nio-8080-exec-1] [/user] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-08 00:11:48.311 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-08 00:11:48.317 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-08 00:11:48.383 [http-nio-8080-exec-1] UserController - tesetSuccess

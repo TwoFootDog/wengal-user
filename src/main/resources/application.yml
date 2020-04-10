@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local
+
+---
+logging:
+  config: classpath:log4j2.yml
+---
+
+server:
+  port: 8080
+  servlet:
+    context-path: /user/api/v1
+
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mariadb://gajoa-db1.cklyw6tgbrhb.ap-northeast-2.rds.amazonaws.com:3306/gajoa_test_db1
+    username: admin
+    password: rkdalsrb12#
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
