@@ -1,6 +1,8 @@
-[INFO ] 2020-04-08 00:09:30.263 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user'
-[INFO ] 2020-04-08 00:09:30.269 [main] WengalUserApplication - Started WengalUserApplication in 2.79 seconds (JVM running for 4.556)
-[INFO ] 2020-04-08 00:11:48.310 [http-nio-8080-exec-1] [/user] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2020-04-08 00:11:48.311 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 2020-04-08 00:11:48.317 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
-[INFO ] 2020-04-08 00:11:48.383 [http-nio-8080-exec-1] UserController - tesetSuccess
+[INFO ] 2020-04-14 00:15:02.558 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-14 00:15:02.563 [main] WengalUserApplication - Started WengalUserApplication in 3.369 seconds (JVM running for 4.691)
+[INFO ] 2020-04-14 00:15:05.424 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:15:05.425 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:15:05.431 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[WARN ] 2020-04-14 00:15:05.745 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+[ERROR] 2020-04-14 00:15:05.746 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=1136) Duplicate entry 'ekfrl2816@gmail.com' for key 'UK_9pthxage17mc9xbu6xjrhf4r9'
+[INFO ] 2020-04-14 00:15:05.769 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>

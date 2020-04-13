@@ -1,5 +1,6 @@
 package com.project.application.controller;
 
+import com.project.domain.user.model.dto.SignUpRequest;
 import com.project.domain.user.model.dto.SingleResult;
 import com.project.domain.user.model.entity.User;
 import com.project.domain.user.service.UserService;
@@ -23,9 +24,10 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/signin")
-    public SingleResult<User> signIn(@RequestBody SingleRequest<User> user) {
 
+    @PostMapping("/signup")
+    public SingleResult<User> signUp(@RequestBody SignUpRequest request) throws Exception {
+        return userService.signUp(request);
     }
 
     @GetMapping("/test")

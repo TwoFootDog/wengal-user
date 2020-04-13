@@ -143,3 +143,549 @@ Using generated security password: 9ae64b8f-02f9-47fa-8d13-57b898072555
 [INFO ] 2020-04-08 00:11:48.311 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 [INFO ] 2020-04-08 00:11:48.317 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
 [INFO ] 2020-04-08 00:11:48.383 [http-nio-8080-exec-1] UserController - tesetSuccess
+[INFO ] 2020-04-11 23:00:54.779 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 15300 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:00:54.788 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:00:55.376 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:00:55.465 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:00:55.987 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:00:55.996 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:00:55.997 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:00:55.998 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:00:56.000 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:00:56.000 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:00:56.000 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:00:56.003 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:00:56.022 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:00:56.204 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:00:56.205 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1384 ms
+[INFO ] 2020-04-11 23:00:56.455 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:00:56.548 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:00:56.779 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:00:56.918 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:00:57.124 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:00:57.143 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:00:58.392 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:00:58.406 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:00:58.692 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:00:58.842 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:00:59.279 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 79c6b149-5bf9-4c3d-8a1b-a9c10cbb2384
+
+[INFO ] 2020-04-11 23:00:59.412 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ca6ba3, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b41740, org.springframework.security.web.header.HeaderWriterFilter@fb42c1c, org.springframework.security.web.csrf.CsrfFilter@73fe7483, org.springframework.security.web.authentication.logout.LogoutFilter@7741507c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@62dfe152, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27575bcd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74797b90, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@54e680fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57a0c261, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@488279d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7676b2b9, org.springframework.security.web.session.SessionManagementFilter@2911db81, org.springframework.security.web.access.ExceptionTranslationFilter@5ca7619f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44117b0d]
+[INFO ] 2020-04-11 23:00:59.457 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:00:59.518 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:00:59.519 [main] WengalUserApplication - Started WengalUserApplication in 5.088 seconds (JVM running for 6.573)
+[INFO ] 2020-04-11 23:02:13.630 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:02:13.631 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:02:13.639 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[WARN ] 2020-04-11 23:02:13.909 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [248] milliseconds.
+[INFO ] 2020-04-11 23:03:19.737 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 38428 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:03:19.746 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:03:20.332 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:03:20.404 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:03:20.931 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:03:20.941 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:03:20.942 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:03:20.943 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:03:20.945 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:03:20.946 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:03:20.946 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:03:20.950 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:03:20.955 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:03:21.105 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:03:21.105 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1314 ms
+[INFO ] 2020-04-11 23:03:21.270 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:03:21.346 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:03:21.486 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:03:21.589 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:03:21.730 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:03:21.750 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:03:22.750 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:03:22.769 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:03:23.135 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:03:23.254 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:03:23.461 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: acbf87d0-2540-4ec5-bb3c-2e0b7a9271df
+
+[INFO ] 2020-04-11 23:03:23.613 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6edb2c7b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ad7a305, org.springframework.security.web.header.HeaderWriterFilter@35d3202b, org.springframework.security.web.csrf.CsrfFilter@69c0bae6, org.springframework.security.web.authentication.logout.LogoutFilter@13866865, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fecb076, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@fe09374, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@70a54731, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@54a033b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bf18412, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@299ddfff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36d5c2ce, org.springframework.security.web.session.SessionManagementFilter@64381526, org.springframework.security.web.access.ExceptionTranslationFilter@5703c1fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3bf40c74]
+[INFO ] 2020-04-11 23:03:23.660 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:03:23.725 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:03:23.727 [main] WengalUserApplication - Started WengalUserApplication in 4.319 seconds (JVM running for 5.78)
+[INFO ] 2020-04-11 23:03:39.978 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 7308 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:03:39.987 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:03:40.648 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:03:40.723 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:03:41.272 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:03:41.289 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:03:41.301 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:03:41.303 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:03:41.307 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:03:41.308 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:03:41.309 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:03:41.309 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:03:41.317 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:03:41.482 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:03:41.485 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1459 ms
+[INFO ] 2020-04-11 23:03:41.634 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:03:41.713 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:03:41.847 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:03:41.949 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:03:42.135 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:03:42.166 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:03:43.036 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:03:43.061 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:03:43.379 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:03:43.506 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:03:43.683 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4fb715c2-8b43-4a73-bbf0-792333897ec3
+
+[INFO ] 2020-04-11 23:03:43.795 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1831447c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f69e2d8, org.springframework.security.web.header.HeaderWriterFilter@747e8659, org.springframework.security.web.csrf.CsrfFilter@66e218d8, org.springframework.security.web.authentication.logout.LogoutFilter@43b2e7db, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19de32cb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7d563c13, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7741507c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e7113f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3539cf45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64cdc310, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37a0fc8c, org.springframework.security.web.session.SessionManagementFilter@75fa9254, org.springframework.security.web.access.ExceptionTranslationFilter@5dac6bc3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e02fb23]
+[INFO ] 2020-04-11 23:03:43.834 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:03:43.895 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:03:43.898 [main] WengalUserApplication - Started WengalUserApplication in 4.257 seconds (JVM running for 5.796)
+[INFO ] 2020-04-11 23:03:47.162 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:03:47.163 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:03:47.171 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[WARN ] 2020-04-11 23:03:47.405 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [192] milliseconds.
+[INFO ] 2020-04-11 23:08:52.277 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 46296 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:08:52.287 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:08:52.866 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:08:52.936 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:08:53.511 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:08:53.520 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:08:53.522 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:08:53.522 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:08:53.524 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:08:53.525 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:08:53.525 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:08:53.527 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:08:53.532 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:08:53.678 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:08:53.679 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1351 ms
+[INFO ] 2020-04-11 23:08:53.832 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:08:53.900 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:08:54.209 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:08:54.426 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:08:54.627 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:08:54.680 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:08:55.605 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:08:55.622 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:08:55.933 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:08:56.068 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:08:56.374 [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7c726546-a68c-4f8b-86b5-7e46940894f7
+
+[INFO ] 2020-04-11 23:08:56.508 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@333efb51, org.springframework.security.web.context.SecurityContextPersistenceFilter@58d79479, org.springframework.security.web.header.HeaderWriterFilter@530df3ab, org.springframework.security.web.csrf.CsrfFilter@31940d6b, org.springframework.security.web.authentication.logout.LogoutFilter@69c0bae6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@402676e3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@670ae31f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c451c4a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4eace42b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495f7ca4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39a30d1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38ad86b1, org.springframework.security.web.session.SessionManagementFilter@aaa7000, org.springframework.security.web.access.ExceptionTranslationFilter@43b2e7db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35c95869]
+[INFO ] 2020-04-11 23:08:56.575 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:08:56.639 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:08:56.641 [main] WengalUserApplication - Started WengalUserApplication in 4.682 seconds (JVM running for 6.179)
+[INFO ] 2020-04-11 23:09:40.928 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 15216 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:09:40.943 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:09:41.577 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:09:41.656 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:09:42.176 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:09:42.186 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:09:42.193 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:09:42.195 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:09:42.198 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:09:42.198 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:09:42.199 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:09:42.199 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:09:42.203 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:09:42.325 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:09:42.328 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1352 ms
+[INFO ] 2020-04-11 23:09:42.467 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:09:42.536 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:09:42.690 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:09:42.809 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:09:43.007 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:09:43.072 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:09:44.200 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:09:44.224 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:09:44.668 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:09:44.810 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:09:44.963 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:09:44.982 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:09:44.984 [main] WengalUserApplication - Started WengalUserApplication in 4.381 seconds (JVM running for 7.352)
+[INFO ] 2020-04-11 23:09:48.057 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:09:48.058 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:09:48.068 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2020-04-11 23:09:48.099 [http-nio-8080-exec-1] UserController - tesetSuccess
+[WARN ] 2020-04-11 23:10:06.886 [http-nio-8080-exec-2] DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+[INFO ] 2020-04-11 23:11:08.620 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 14808 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:11:08.630 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:11:09.205 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:11:09.272 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:11:09.770 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:11:09.784 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:11:09.796 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:11:09.798 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:11:09.801 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:11:09.802 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:11:09.803 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:11:09.804 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:11:09.811 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:11:10.037 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:11:10.040 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1365 ms
+[INFO ] 2020-04-11 23:11:10.189 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:11:10.268 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:11:10.403 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:11:10.513 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:11:10.645 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:11:10.659 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:11:11.425 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:11:11.439 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:11:11.711 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:11:11.828 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:11:11.984 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:11:12.007 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:11:12.009 [main] WengalUserApplication - Started WengalUserApplication in 3.783 seconds (JVM running for 5.309)
+[INFO ] 2020-04-11 23:13:30.712 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 1848 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:13:30.726 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:13:31.721 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:13:31.815 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:13:32.336 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:13:32.345 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:13:32.346 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:13:32.347 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:13:32.349 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:13:32.349 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:13:32.350 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:13:32.352 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:13:32.357 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:13:32.480 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:13:32.480 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1644 ms
+[INFO ] 2020-04-11 23:13:32.631 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:13:32.726 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:13:32.895 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:13:33.011 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:13:33.126 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:13:33.143 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:13:33.978 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:13:34.013 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:13:34.400 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:13:34.562 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:13:34.825 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:13:34.858 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:13:34.865 [main] WengalUserApplication - Started WengalUserApplication in 4.817 seconds (JVM running for 6.795)
+[INFO ] 2020-04-11 23:13:57.431 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:13:57.432 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:13:57.438 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[WARN ] 2020-04-11 23:13:57.684 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:13:57.684 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=29557) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:17:23.220 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 40588 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:17:23.227 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:17:23.769 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:17:23.834 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:17:24.289 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:17:24.297 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:17:24.298 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:17:24.299 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:17:24.301 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:17:24.301 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:17:24.302 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:17:24.304 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:17:24.308 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:17:24.432 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:17:24.433 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1164 ms
+[INFO ] 2020-04-11 23:17:24.566 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:17:24.643 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:17:24.779 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:17:24.890 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:17:25.095 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:17:25.172 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:17:26.627 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:17:26.656 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:17:27.011 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:17:27.123 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:17:27.305 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:17:27.330 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:17:27.336 [main] WengalUserApplication - Started WengalUserApplication in 4.443 seconds (JVM running for 5.882)
+[INFO ] 2020-04-11 23:17:53.539 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:17:53.540 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:17:53.548 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[WARN ] 2020-04-11 23:17:53.813 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:17:53.813 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=29569) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:17:53.837 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-11 23:35:54.235 [http-nio-8080-exec-4] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:35:54.239 [http-nio-8080-exec-4] SqlExceptionHelper - (conn=29569) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:35:54.250 [http-nio-8080-exec-4] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-11 23:36:04.836 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 5540 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:36:04.845 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:36:05.392 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:36:05.464 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:36:05.951 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:36:05.968 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:36:05.969 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:36:05.969 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:36:05.971 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:36:05.972 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:36:05.972 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:36:05.972 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:36:05.976 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:36:06.103 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:36:06.104 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1225 ms
+[INFO ] 2020-04-11 23:36:06.251 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:36:06.330 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:36:06.453 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:36:06.558 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:36:06.684 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:36:06.700 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:36:07.379 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:36:07.387 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:36:07.629 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:36:07.753 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:36:07.903 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:36:07.927 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:36:07.929 [main] WengalUserApplication - Started WengalUserApplication in 3.416 seconds (JVM running for 4.818)
+[INFO ] 2020-04-11 23:36:10.317 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:36:10.318 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:36:10.329 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[WARN ] 2020-04-11 23:36:10.589 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:36:10.589 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=29587) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:36:10.610 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-11 23:37:52.375 [http-nio-8080-exec-3] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:37:52.375 [http-nio-8080-exec-3] SqlExceptionHelper - (conn=11) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:37:52.388 [http-nio-8080-exec-3] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-11 23:37:58.055 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 19816 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-11 23:37:58.073 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-11 23:37:58.674 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-11 23:37:58.745 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-11 23:37:59.262 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-11 23:37:59.273 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:37:59.274 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-11 23:37:59.275 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-11 23:37:59.277 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-11 23:37:59.280 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-11 23:37:59.281 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-11 23:37:59.281 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-11 23:37:59.286 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-11 23:37:59.408 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-11 23:37:59.408 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1289 ms
+[INFO ] 2020-04-11 23:37:59.598 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-11 23:37:59.664 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-11 23:37:59.784 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-11 23:37:59.882 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-11 23:37:59.991 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-11 23:38:00.040 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-11 23:38:00.750 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-11 23:38:00.757 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-11 23:38:01.071 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-11 23:38:01.184 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-11 23:38:01.330 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-11 23:38:01.354 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-11 23:38:01.356 [main] WengalUserApplication - Started WengalUserApplication in 3.629 seconds (JVM running for 5.14)
+[INFO ] 2020-04-11 23:38:09.563 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:38:09.563 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-11 23:38:09.572 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 9 ms
+[WARN ] 2020-04-11 23:38:10.054 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:38:10.054 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=21) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:38:10.086 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-11 23:44:56.213 [http-nio-8080-exec-3] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:44:56.213 [http-nio-8080-exec-3] SqlExceptionHelper - (conn=21) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:44:56.227 [http-nio-8080-exec-3] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-11 23:45:07.812 [http-nio-8080-exec-4] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:45:07.813 [http-nio-8080-exec-4] SqlExceptionHelper - (conn=21) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:45:07.827 [http-nio-8080-exec-4] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-11 23:46:35.923 [http-nio-8080-exec-6] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-11 23:46:35.923 [http-nio-8080-exec-6] SqlExceptionHelper - (conn=21) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-11 23:46:35.940 [http-nio-8080-exec-6] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-12 00:15:46.977 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 49124 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-12 00:15:46.993 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-12 00:15:47.559 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-12 00:15:47.636 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-12 00:15:48.173 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-12 00:15:48.185 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:15:48.192 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-12 00:15:48.194 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-12 00:15:48.196 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-12 00:15:48.197 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-12 00:15:48.197 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-12 00:15:48.198 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-12 00:15:48.202 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-12 00:15:48.355 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-12 00:15:48.358 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1328 ms
+[INFO ] 2020-04-12 00:15:48.520 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-12 00:15:48.596 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-12 00:15:48.725 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-12 00:15:48.832 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-12 00:15:48.980 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-12 00:15:48.998 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-12 00:15:49.812 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-12 00:15:49.820 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-12 00:15:50.074 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-12 00:15:50.204 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-12 00:15:50.367 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:15:50.390 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-12 00:15:50.393 [main] WengalUserApplication - Started WengalUserApplication in 3.766 seconds (JVM running for 5.212)
+[INFO ] 2020-04-12 00:15:59.782 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:15:59.782 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:15:59.790 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[WARN ] 2020-04-12 00:16:00.053 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-12 00:16:00.057 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=15) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-12 00:16:00.087 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[WARN ] 2020-04-12 00:16:36.491 [http-nio-8080-exec-2] SqlExceptionHelper - SQL Error: 1366, SQLState: 22007
+[ERROR] 2020-04-12 00:16:36.491 [http-nio-8080-exec-2] SqlExceptionHelper - (conn=15) Incorrect string value: '\xEB\x91\x90\xEB\xB0\x9C...' for column `gajoa_test_db1`.`usr_auth_mst`.`nickname` at row 1
+[INFO ] 2020-04-12 00:16:36.504 [http-nio-8080-exec-2] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-12 00:17:16.657 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 47728 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-12 00:17:16.671 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-12 00:17:17.235 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-12 00:17:17.307 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-12 00:17:17.832 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-12 00:17:17.843 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:17:17.844 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-12 00:17:17.845 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-12 00:17:17.847 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-12 00:17:17.848 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-12 00:17:17.848 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-12 00:17:17.851 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-12 00:17:17.856 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-12 00:17:17.992 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-12 00:17:17.992 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1277 ms
+[INFO ] 2020-04-12 00:17:18.143 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-12 00:17:18.222 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-12 00:17:18.355 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-12 00:17:18.464 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-12 00:17:18.649 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-12 00:17:18.667 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-12 00:17:19.654 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-12 00:17:19.690 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-12 00:17:20.032 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-12 00:17:20.184 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-12 00:17:20.370 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:17:20.395 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-12 00:17:20.401 [main] WengalUserApplication - Started WengalUserApplication in 4.069 seconds (JVM running for 5.478)
+[INFO ] 2020-04-12 00:17:21.899 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:17:21.900 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:17:21.908 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-04-12 00:35:34.644 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 25848 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-12 00:35:34.653 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-12 00:35:35.191 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-12 00:35:35.259 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-12 00:35:35.749 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-12 00:35:35.760 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:35:35.761 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-12 00:35:35.762 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-12 00:35:35.764 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-12 00:35:35.764 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-12 00:35:35.765 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-12 00:35:35.765 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-12 00:35:35.773 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-12 00:35:35.904 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-12 00:35:35.904 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1213 ms
+[INFO ] 2020-04-12 00:35:36.082 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-12 00:35:36.191 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-12 00:35:36.419 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-12 00:35:36.546 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-12 00:35:36.687 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-12 00:35:36.715 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-12 00:35:38.279 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-12 00:35:38.298 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-12 00:35:38.578 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-12 00:35:38.688 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-12 00:35:38.839 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-12 00:35:38.864 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-12 00:35:38.866 [main] WengalUserApplication - Started WengalUserApplication in 4.536 seconds (JVM running for 5.914)
+[INFO ] 2020-04-12 00:35:44.787 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:35:44.791 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-12 00:35:44.806 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 15 ms
+[INFO ] 2020-04-14 00:13:20.549 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 23272 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-14 00:13:20.574 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-14 00:13:21.305 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-14 00:13:21.388 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-14 00:13:21.936 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-14 00:13:21.947 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:13:21.956 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-14 00:13:21.957 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-14 00:13:21.959 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-14 00:13:21.960 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-14 00:13:21.961 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-14 00:13:21.962 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-14 00:13:21.981 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-14 00:13:22.129 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-14 00:13:22.133 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1490 ms
+[INFO ] 2020-04-14 00:13:22.292 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-14 00:13:22.374 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-14 00:13:22.541 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-14 00:13:22.694 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-14 00:13:22.884 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-14 00:13:22.903 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-14 00:13:23.632 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-14 00:13:23.638 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-14 00:13:23.898 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-14 00:13:24.030 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-14 00:13:24.182 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:13:24.208 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-14 00:13:24.212 [main] WengalUserApplication - Started WengalUserApplication in 4.108 seconds (JVM running for 5.746)
+[INFO ] 2020-04-14 00:13:53.367 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:13:53.368 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:13:53.375 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[WARN ] 2020-04-14 00:13:53.647 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+[ERROR] 2020-04-14 00:13:53.651 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=1115) Duplicate entry 'ekfrl2816@gmail.com' for key 'UK_9pthxage17mc9xbu6xjrhf4r9'
+[INFO ] 2020-04-14 00:13:53.679 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-14 00:14:46.817 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 33704 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-14 00:14:46.825 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-14 00:14:47.339 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-14 00:14:47.402 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-14 00:14:47.858 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-14 00:14:47.879 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:14:47.881 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-14 00:14:47.882 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-14 00:14:47.884 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-14 00:14:47.885 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-14 00:14:47.885 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-14 00:14:47.885 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-14 00:14:47.889 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-14 00:14:48.043 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-14 00:14:48.044 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1185 ms
+[INFO ] 2020-04-14 00:14:48.212 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-14 00:14:48.289 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-14 00:14:48.425 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-14 00:14:48.547 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-14 00:14:48.684 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-14 00:14:48.741 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-14 00:14:49.588 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-14 00:14:49.597 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-14 00:14:49.900 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-14 00:14:50.031 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-14 00:14:50.183 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:14:50.203 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-14 00:14:50.205 [main] WengalUserApplication - Started WengalUserApplication in 3.713 seconds (JVM running for 5.107)
+[INFO ] 2020-04-14 00:14:59.494 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 26144 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-14 00:14:59.502 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-14 00:15:00.034 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-14 00:15:00.101 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60ms. Found 2 JPA repository interfaces.
+[INFO ] 2020-04-14 00:15:00.550 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-14 00:15:00.560 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:15:00.562 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-14 00:15:00.563 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-14 00:15:00.565 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-14 00:15:00.565 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-14 00:15:00.566 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-14 00:15:00.569 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-14 00:15:00.573 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-14 00:15:00.709 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-14 00:15:00.709 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1167 ms
+[INFO ] 2020-04-14 00:15:00.862 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-14 00:15:00.930 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-14 00:15:01.054 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-14 00:15:01.156 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-14 00:15:01.279 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-14 00:15:01.311 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-14 00:15:02.010 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-14 00:15:02.017 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-14 00:15:02.263 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-14 00:15:02.386 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-14 00:15:02.538 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-14 00:15:02.558 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-14 00:15:02.563 [main] WengalUserApplication - Started WengalUserApplication in 3.369 seconds (JVM running for 4.691)
+[INFO ] 2020-04-14 00:15:05.424 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:15:05.425 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-14 00:15:05.431 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[WARN ] 2020-04-14 00:15:05.745 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+[ERROR] 2020-04-14 00:15:05.746 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=1136) Duplicate entry 'ekfrl2816@gmail.com' for key 'UK_9pthxage17mc9xbu6xjrhf4r9'
+[INFO ] 2020-04-14 00:15:05.769 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
