@@ -1,16 +1,17 @@
 package com.project.domain.user.service;
 
-import com.project.domain.user.model.dto.CommonResult;
-import com.project.domain.user.model.dto.SignUpRequest;
-import com.project.domain.user.model.dto.SingleResult;
+import com.project.domain.user.model.dto.*;
 import com.project.domain.user.model.entity.User;
 import com.project.domain.user.repository.UserRepository;
+import com.project.exception.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 
 
 @Service
@@ -27,30 +28,47 @@ public class UserServiceImpl implements UserService {
 
 
     /* 회원 등록 함수 */
-    public SingleResult<User> signUp(SignUpRequest request) throws Exception {
-        SingleResult<User> result = new SingleResult<>();
+    public SingleResult<SignUpResult> signUp(SignUpRequest request) throws Exception {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();    // 패스워드 인코더
+        SingleResult<SignUpResult> result;
         User user = new User(
                 request.getEmail(),
-                request.getPassword(),
+                passwordEncoder.encode(request.getPassword()),  // 패스워드 암호화
                 request.getNickname(),
                 "signup",
                 new Date(),
                 "signup",
                 new Date());
         try {
-            result = getSingleResult(userRepository.save(user));
+            User resultUser = userRepository.save(user);    // user 등록
+            result = getSingleResult(new SignUpResult(resultUser.getEmail(), resultUser.getNickname()));    // 단건 결과파일 생성
         } catch (Exception e) {
-            logger.info(">>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>");
-            e.printStackTrace();
+            logger.error("signUp >> userRepository.save(user) Fail");
+            throw new ServiceException(false, -1, "회원가입에 실패했습니다.", e);
         }
+        logger.info("signUp Success. userId : " + user.getId() + ", email : " + user.getEmail() + ", nickName : " + user.getNickname());
         return result;
     }
 
-    /* 결과파일 전송 */
+    /* 회원 탈회 함수 */
+    public SingleResult<DeleteAccountResult> deleteAccount(Long userId) throws Exception {
+        SingleResult<DeleteAccountResult> result;
+        try {
+            userRepository.deleteById(userId);
+            result = getSingleResult(new DeleteAccountResult(userId));
+        } catch (Exception e) {
+            logger.error("deleteAccount >> userRepository.deleteById Fail. userId : " + userId);
+            throw new ServiceException(false, -1, "탈회에 실패했습니다.", e);
+        }
+        logger.error("deleteAccount Success. userId : " + userId);
+        return result;
+    }
+
+    /* 단건 결과파일 전송 */
     public <T> SingleResult<T> getSingleResult(T data) {
         SingleResult<T> result = new SingleResult<T>();
         result.setData(data);
-        setSuccessResult(result);
+        setSuccessResult(result);   // 공통영역 셋팅(success)
         return result;
     }
 

@@ -1,5 +1,6 @@
 package com.project.exception;
 
+import com.project.domain.user.model.dto.CommonResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,9 +9,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(value = BusinessException.class)
-    public ErrorResult handleBusinessException(BusinessException e) {
+    /* Service 에러 처리 Handler */
+    @ExceptionHandler(value = ServiceException.class)
+    public ExceptionResult handleBusinessException(ServiceException e) {
+        ExceptionResult exceptionResult = new ExceptionResult();
+        setFailResult(exceptionResult, e);
+//        exceptionResult.setE(e.getE());
+        return exceptionResult;
+    }
 
-        return new ErrorResult(e.isSuccess(), e.getCode(), e.getMsg());
+    /* 성공 시 메시지 및 코드 셋팅하는 함수 */
+    private void setFailResult(CommonResult result, ServiceException e) {
+        result.setCode(e.getCode());
+        result.setMsg(e.getMsg());
+        result.setSuccess(e.isSuccess());
     }
 }

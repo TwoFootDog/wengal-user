@@ -1,8 +1,2 @@
-[INFO ] 2020-04-14 00:15:02.558 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
-[INFO ] 2020-04-14 00:15:02.563 [main] WengalUserApplication - Started WengalUserApplication in 3.369 seconds (JVM running for 4.691)
-[INFO ] 2020-04-14 00:15:05.424 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2020-04-14 00:15:05.425 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 2020-04-14 00:15:05.431 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
-[WARN ] 2020-04-14 00:15:05.745 [http-nio-8080-exec-1] SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
-[ERROR] 2020-04-14 00:15:05.746 [http-nio-8080-exec-1] SqlExceptionHelper - (conn=1136) Duplicate entry 'ekfrl2816@gmail.com' for key 'UK_9pthxage17mc9xbu6xjrhf4r9'
-[INFO ] 2020-04-14 00:15:05.769 [http-nio-8080-exec-1] UserService - >>>>>>>>>>>>>>>>>>>>>Exception>>>>>>>>>>>>>>>>>>>>>>
+[ERROR] 2020-04-17 18:45:40.165 [http-nio-8080-exec-3] UserService - deleteAccount Success. userId : 36
+[ERROR] 2020-04-17 18:45:44.661 [http-nio-8080-exec-4] UserService - deleteAccount >> userRepository.deleteById Fail. userId : 36
