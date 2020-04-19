@@ -10,16 +10,18 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "usr_info_mst")
+@Table(name = "usr_info_mst",
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "user_info_code"})})   // 유저 정보(공유정보) 테이블
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserInfo extends AbstractEntity implements AggregateRoot {
 
-    @Column(name = "user_id", unique = true)
+    @Column(name = "user_id")
     private Long userId;        // 회원id
 
     @Column(name = " user_info_code", nullable = true, length = 3)

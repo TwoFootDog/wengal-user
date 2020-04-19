@@ -7,17 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "usr_auth_mst")
+@Table(name = "usr_acct_mst")   // 유저 계정 마스터 테이블
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends AbstractEntity implements AggregateRoot {
+public class UserAccount extends AbstractEntity implements AggregateRoot {
     @Column(name = "email", nullable = false, unique = true, length = 50)
     private String email;
 
@@ -40,4 +38,5 @@ public class User extends AbstractEntity implements AggregateRoot {
     @CreationTimestamp
     @Column(name = "upd_dt")
     private Date updDate;
+
 }
