@@ -1,17 +1,22 @@
 package com.project.domain.user.model.entity;
 
 import com.project.domain.base.AbstractEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Table(name = "usr_code_mst",
         uniqueConstraints = {@UniqueConstraint(columnNames = {"code_fg", "code_value"})})
 @Entity
-public class UserCode extends AbstractEntity {
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserCode extends AbstractEntity implements Serializable {
     @Column(name = "code_fg", length = 20)
     private String codeFg;
 
