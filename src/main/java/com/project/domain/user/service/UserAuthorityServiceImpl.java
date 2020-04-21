@@ -49,15 +49,13 @@ public class UserAuthorityServiceImpl implements UserAuthorityService {
         return user;
     }
 
-
     @Override
     public List<GrantedAuthority> makeGrantedAuthority(List<UserAuthority> authorities) {
         logger.info("makeGrantedAuthority>>>>>");
         List<GrantedAuthority> list = new ArrayList<>();
-        authorities.forEach(authority->list.add(new SimpleGrantedAuthority(ROLE_PREFIX + authority.getUserCode().getCodeValue())));
-        authorities.forEach(authority->logger.info("authority.getUserCode().getCodeValue() : " + authority.getUserCode().getCodeValue()));
-       logger.info("authority.getUserCode().getCodeValue() : " + authorities.get(0).getUserCode().getCodeValue());
-        logger.info("authority.getUserCode().getCodeValue() : " + authorities.get(1).getUserCode().getCodeValue());
+        authorities.forEach(authority->list.add(new SimpleGrantedAuthority(ROLE_PREFIX + authority.getAuthName())));
+        authorities.forEach(authority->logger.info("authority.getUserCode().getCodeValue() : " + authority.getAuthName()));
+
         return list;
     }
 }

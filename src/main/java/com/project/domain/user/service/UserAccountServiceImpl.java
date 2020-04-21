@@ -5,7 +5,6 @@ import com.project.domain.user.model.entity.UserAccount;
 import com.project.domain.user.model.entity.UserAuthority;
 import com.project.domain.user.repository.UserAccountRepository;
 import com.project.domain.user.repository.UserAuthorityRepository;
-import com.project.domain.user.repository.UserCodeRepository;
 import com.project.exception.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,16 +21,14 @@ public class UserAccountServiceImpl implements UserAccountService {
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
-    private final UserCodeRepository userCodeRepository;
+
 
 
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
-                                  UserAuthorityRepository userAuthorityRepository,
-                                  UserCodeRepository userCodeRepository) {
+                                  UserAuthorityRepository userAuthorityRepository) {
         this.userAccountRepository = userAccountRepository;
         this.userAuthorityRepository = userAuthorityRepository;
-        this.userCodeRepository = userCodeRepository;
     }
 
 
@@ -50,7 +47,7 @@ public class UserAccountServiceImpl implements UserAccountService {
                 new Date());
         try {
             UserAuthority userAuthority = userAuthorityRepository   // user 및 권한 등록
-                    .save(new UserAuthority(userAccount, userCodeRepository.findByCodeValue("USER"), "signup", new Date(), "signup", new Date()));
+                    .save(new UserAuthority(userAccount, "USER", "signup", new Date(), "signup", new Date()));
             result = getSingleResult(new SignUpResult(userAuthority.getUserAccount().getEmail(), userAuthority.getUserAccount().getNickname()));    // 단건 결과파일 생성
         } catch (Exception e) {
             logger.error("signUp >> userAuthorityRepository.save() Fail");

@@ -19,7 +19,7 @@ import java.util.Date;
         uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "user_info_code"})})   // 유저 정보(공유정보) 테이블
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserInfo extends AbstractEntity implements AggregateRoot {
+public class UserInfo extends AbstractEntity {
 
     @Column(name = "user_id")
     private Long userId;        // 회원id
