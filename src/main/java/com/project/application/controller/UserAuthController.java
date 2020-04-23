@@ -45,8 +45,9 @@ public class UserAuthController {
 
         /* Session의 속성값에 SecurityContext값을 넣어줌 */
         httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
+        logger.info("authentication email : " + authentication.getName(), ", token : " + token);
 
-        return new SingleResult<LoginResult>();
+        return getSingleResult(new LoginResult(authentication.getName(), token.getName()));
     }
 
     /* 단건 결과파일 전송 */
