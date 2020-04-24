@@ -9,9 +9,17 @@ import com.project.exception.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.InternalAuthenticationServiceException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 
@@ -21,16 +29,46 @@ public class UserAccountServiceImpl implements UserAccountService {
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
-
-
+    private final AuthenticationManager authenticationManager;
 
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
-                                  UserAuthorityRepository userAuthorityRepository) {
+                                  UserAuthorityRepository userAuthorityRepository,
+                                  AuthenticationManager authenticationManager) {
         this.userAccountRepository = userAccountRepository;
         this.userAuthorityRepository = userAuthorityRepository;
+        this.authenticationManager = authenticationManager;
     }
 
+    /* 로그인 함수 */
+    public SingleResult<LoginResult> login(LoginRequest request, HttpSession httpSession) {
+
+        String email = request.getEmail();
+        String password = request.getPassword();
+        logger.info("Login email : " + email + ", password : " + password);
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(email, password);
+        Authentication authentication = null;
+        logger.info("Login Token : " + token);
+        try {
+            authentication = authenticationManager.authenticate(token);  // userAuthService의 loadUserByUsername 호출
+            logger.info("authentication : " + authentication);
+        } catch (InternalAuthenticationServiceException e) {
+            throw new ServiceException(false, -1, "계정정보가 존재하지 않습니다", e);
+        } catch (BadCredentialsException e) {
+            throw new ServiceException(false, -1, "비밀번호가 일치하지 않습니다", e);
+        } catch (Exception e) {
+            throw new ServiceException(false, -1, "시스템실 연락바람", e);
+        }
+
+        /* 인증받은 결과를 SecurityContextHolder에서 getContext()를 통해 context로 받아온 후,
+        이 context(인증결과)를 set 해줌. 이로써 서버의 SecurityContext에는 인증값이 설정됨 */
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        /* Session의 속성값에 SecurityContext값을 넣어줌 */
+        httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
+
+        return getSingleResult(new LoginResult(authentication.getName(), token.getName()));
+    }
 
 
     /* 회원 등록 함수 */

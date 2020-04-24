@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 
 @RestController
 public class UserController {
@@ -18,6 +20,10 @@ public class UserController {
         this.userAccountService = userAccountService;
     }
 
+    @PostMapping("/login")
+    public SingleResult<LoginResult> login(@RequestBody LoginRequest request, HttpSession httpSession) {
+        return userAccountService.login(request, httpSession);
+    }
 
     @PostMapping("/user")
     public SingleResult<SignUpResult> signUp(@RequestBody SignUpRequest request) throws Exception {

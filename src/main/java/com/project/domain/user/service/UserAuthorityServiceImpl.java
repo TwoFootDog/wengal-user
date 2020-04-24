@@ -35,27 +35,15 @@ public class UserAuthorityServiceImpl implements UserAuthorityService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        logger.info("loadUserByUsername call. username : " + username);
-        UserAccount userAccount = userAccountRepository.findByEmail(username);
-        logger.info("loadUserByUsername call. userAccount : " + userAccount);
-        User user = null;
-        try {
-            user = new User(userAccount.getEmail(), userAccount.getPassword(), makeGrantedAuthority(userAuthorityRepository.findAllByUserAccount(userAccount)));
-        } catch (Exception e ) {
-            e.printStackTrace();
-        }
-
-        logger.info("loadUserByUsername call. user : " + user);
+        UserAccount userAccount = userAccountRepository.findByEmail(username);  // email로 계정정보 검색
+        User user = new User(userAccount.getEmail(), userAccount.getPassword(), makeGrantedAuthority(userAuthorityRepository.findAllByUserAccount(userAccount)));
         return user;
     }
 
     @Override
     public List<GrantedAuthority> makeGrantedAuthority(List<UserAuthority> authorities) {
-        logger.info("makeGrantedAuthority>>>>>");
         List<GrantedAuthority> list = new ArrayList<>();
         authorities.forEach(authority->list.add(new SimpleGrantedAuthority(ROLE_PREFIX + authority.getAuthName())));
-        authorities.forEach(authority->logger.info("authority.getUserCode().getCodeValue() : " + authority.getAuthName()));
-
         return list;
     }
 }
