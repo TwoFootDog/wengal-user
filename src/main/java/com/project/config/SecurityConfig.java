@@ -1,6 +1,8 @@
 package com.project.config;
 
 import com.project.domain.user.service.UserAuthorityService;
+import com.project.util.JwtAuthenticationFilter;
+import com.project.util.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,15 +13,24 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
     private UserAuthorityService userAuthorityService;
+    private final JwtTokenProvider jwtTokenProvider;
+
+    @Autowired
+    public SecurityConfig(UserAuthorityService userAuthorityService,
+                          JwtTokenProvider jwtTokenProvider) {
+        this.userAuthorityService = userAuthorityService;
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -44,10 +55,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/user/api/v1/user").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/api/v1/login").permitAll();
+                .antMatchers(HttpMethod.POST, "/user","/login").permitAll()
+                .antMatchers("/test").authenticated()
+//                .anyRequest().authenticated()   // 인증된 사용자인지 확인
+                .and()
+//                    .addFilterBefore(new CorsFilter(), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
         http.cors();
         http.csrf().disable();
+
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Jwt 를 이용한 인증이므로 세션은 생성 안함
     }
 
 

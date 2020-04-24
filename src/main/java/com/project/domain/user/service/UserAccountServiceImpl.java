@@ -6,6 +6,7 @@ import com.project.domain.user.model.entity.UserAuthority;
 import com.project.domain.user.repository.UserAccountRepository;
 import com.project.domain.user.repository.UserAuthorityRepository;
 import com.project.exception.ServiceException;
+import com.project.util.JwtTokenProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +30,17 @@ public class UserAccountServiceImpl implements UserAccountService {
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
+    private final JwtTokenProvider jwtTokenProvider;
     private final AuthenticationManager authenticationManager;
 
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
                                   UserAuthorityRepository userAuthorityRepository,
+                                  JwtTokenProvider jwtTokenProvider,
                                   AuthenticationManager authenticationManager) {
         this.userAccountRepository = userAccountRepository;
         this.userAuthorityRepository = userAuthorityRepository;
+        this.jwtTokenProvider = jwtTokenProvider;
         this.authenticationManager = authenticationManager;
     }
 
@@ -67,7 +71,10 @@ public class UserAccountServiceImpl implements UserAccountService {
         /* Session의 속성값에 SecurityContext값을 넣어줌 */
         httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
-        return getSingleResult(new LoginResult(authentication.getName(), token.getName()));
+        /* JWT Token 생성 */
+        String jwt = jwtTokenProvider.generateToken(authentication);
+
+        return getSingleResult(new LoginResult(authentication.getName(), jwt));
     }
 
 

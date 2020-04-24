@@ -8710,3 +8710,1255 @@ The dependencies of some of the beans in the application context form a cycle:
 [INFO ] 2020-04-25 02:56:43.568 [http-nio-8080-exec-3] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
 [INFO ] 2020-04-25 02:56:43.569 [http-nio-8080-exec-3] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
 [INFO ] 2020-04-25 02:56:43.694 [http-nio-8080-exec-3] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:20:59.786 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 31088 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:20:59.800 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:21:00.346 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:21:00.419 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:21:00.847 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:21:00.862 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:21:00.863 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:21:00.863 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:21:00.865 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:21:00.865 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:21:00.866 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:21:00.866 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:21:00.869 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:21:00.995 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:21:00.996 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1165 ms
+[INFO ] 2020-04-25 03:21:01.138 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:21:01.204 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:21:01.321 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:21:01.418 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:21:01.575 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:21:01.594 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:21:02.247 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:21:02.261 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:21:02.568 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:21:02.668 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:21:02.669 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:21:02.669 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:21:02.669 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:21:02.669 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:21:02.670 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:21:02.672 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:21:02.673 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:21:02.673 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:21:02.673 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:21:02.673 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:21:02.673 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:21:02.674 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:21:02.674 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:21:02.859 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c1df0e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@8636cf4, org.springframework.security.web.header.HeaderWriterFilter@6244afc4, org.springframework.web.filter.CorsFilter@4b7a4c83, org.springframework.security.web.authentication.logout.LogoutFilter@5c215642, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f65af91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@630c3af3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@768e40af, org.springframework.security.web.session.SessionManagementFilter@61ca5134, org.springframework.security.web.access.ExceptionTranslationFilter@f98cff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13018f00]
+[INFO ] 2020-04-25 03:21:02.903 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:21:02.999 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:21:03.019 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:21:03.021 [main] WengalUserApplication - Started WengalUserApplication in 3.533 seconds (JVM running for 4.899)
+[INFO ] 2020-04-25 03:21:07.351 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:21:07.352 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:21:07.359 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[WARN ] 2020-04-25 03:21:07.696 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [231] milliseconds.
+[INFO ] 2020-04-25 03:21:07.700 [http-nio-8080-exec-1] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:21:07.703 [http-nio-8080-exec-1] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:21:08.027 [http-nio-8080-exec-1] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:21:08.030 [http-nio-8080-exec-1] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:22:42.086 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 27824 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:22:42.100 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:22:42.671 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:22:42.744 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:22:43.181 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:22:43.189 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:22:43.190 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:22:43.191 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:22:43.192 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:22:43.195 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:22:43.196 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:22:43.196 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:22:43.201 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:22:43.315 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:22:43.315 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1184 ms
+[INFO ] 2020-04-25 03:22:43.450 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:22:43.517 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:22:43.632 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:22:43.728 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:22:43.933 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:22:43.953 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:22:44.634 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:22:44.650 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:22:44.935 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:22:45.045 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:22:45.048 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:22:45.048 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:22:45.049 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:22:45.049 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:22:45.049 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:22:45.049 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:22:45.049 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:22:45.050 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:22:45.050 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:22:45.053 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:22:45.053 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:22:45.053 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:22:45.053 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:22:45.196 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b3ee43e, org.springframework.security.web.context.SecurityContextPersistenceFilter@da67c46, org.springframework.security.web.header.HeaderWriterFilter@21d15932, org.springframework.web.filter.CorsFilter@53da2aec, org.springframework.security.web.authentication.logout.LogoutFilter@53b907d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ae6927, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cca2e9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18a38bba, org.springframework.security.web.session.SessionManagementFilter@a6a2c20, org.springframework.security.web.access.ExceptionTranslationFilter@5870fc05, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49fb693d]
+[INFO ] 2020-04-25 03:22:45.260 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:22:45.350 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:22:45.371 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:22:45.373 [main] WengalUserApplication - Started WengalUserApplication in 3.578 seconds (JVM running for 4.978)
+[INFO ] 2020-04-25 03:22:49.968 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:22:49.969 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:22:49.977 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[WARN ] 2020-04-25 03:22:50.260 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [180] milliseconds.
+[INFO ] 2020-04-25 03:22:50.264 [http-nio-8080-exec-1] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:22:50.268 [http-nio-8080-exec-1] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:22:50.606 [http-nio-8080-exec-1] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:22:50.608 [http-nio-8080-exec-1] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:24:23.758 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 18136 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:24:23.771 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:24:24.318 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:24:24.395 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:24:24.821 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:24:24.830 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:24:24.830 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:24:24.831 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:24:24.833 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:24:24.836 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:24:24.836 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:24:24.836 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:24:24.841 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:24:24.967 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:24:24.967 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1166 ms
+[INFO ] 2020-04-25 03:24:25.104 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:24:25.174 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:24:25.291 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:24:25.389 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:24:25.587 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:24:25.609 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:24:26.316 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:24:26.325 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:24:26.633 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:24:26.743 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:24:26.746 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:24:26.746 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:24:26.747 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:24:26.751 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:24:26.751 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:24:26.751 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:24:26.751 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:24:26.920 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4511146f, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c3924fd, org.springframework.security.web.header.HeaderWriterFilter@26a202ae, org.springframework.web.filter.CorsFilter@5c16561a, org.springframework.security.web.authentication.logout.LogoutFilter@4e26c308, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b94c200, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f2f92f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5819ee0f, org.springframework.security.web.session.SessionManagementFilter@1b79df53, org.springframework.security.web.access.ExceptionTranslationFilter@5a4e492c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bd1098]
+[INFO ] 2020-04-25 03:24:26.969 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:24:27.069 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:24:27.089 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:24:27.091 [main] WengalUserApplication - Started WengalUserApplication in 3.635 seconds (JVM running for 4.918)
+[INFO ] 2020-04-25 03:24:31.014 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:24:31.015 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:24:31.022 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[WARN ] 2020-04-25 03:24:31.290 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [161] milliseconds.
+[INFO ] 2020-04-25 03:24:31.294 [http-nio-8080-exec-1] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:24:31.297 [http-nio-8080-exec-1] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:24:31.602 [http-nio-8080-exec-1] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:24:31.605 [http-nio-8080-exec-1] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:24:45.905 [http-nio-8080-exec-2] UserAccountService - signUp Success. userId : 57, email : ekfrl2819@gmail.com, nickName : 다섯발로걷는개
+[INFO ] 2020-04-25 03:25:16.214 [http-nio-8080-exec-3] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:25:42.367 [http-nio-8080-exec-4] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:26:20.970 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 13580 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:26:20.978 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:26:21.533 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:26:21.611 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:26:22.053 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:26:22.062 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:26:22.069 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:26:22.070 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:26:22.072 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:26:22.073 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:26:22.073 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:26:22.073 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:26:22.077 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:26:22.200 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:26:22.203 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1186 ms
+[INFO ] 2020-04-25 03:26:22.340 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:26:22.409 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:26:22.524 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:26:22.617 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:26:22.781 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:26:22.818 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:26:23.520 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:26:23.529 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:26:23.834 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:26:23.958 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:26:23.958 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:26:23.958 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:26:23.958 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:26:23.959 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:26:23.959 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:26:23.959 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:26:23.959 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:26:23.962 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:26:23.962 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:26:23.962 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:26:23.962 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:26:23.963 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:26:23.963 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:26:24.145 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15a2fddd, org.springframework.security.web.context.SecurityContextPersistenceFilter@291028d7, org.springframework.security.web.header.HeaderWriterFilter@7204d98f, org.springframework.web.filter.CorsFilter@452e2210, org.springframework.security.web.authentication.logout.LogoutFilter@399fd710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f2f92f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38197e82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18c0f025, org.springframework.security.web.session.SessionManagementFilter@2e40ea48, org.springframework.security.web.access.ExceptionTranslationFilter@33a8f553, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6958d5d0]
+[INFO ] 2020-04-25 03:26:24.189 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:26:24.287 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:26:24.306 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:26:24.308 [main] WengalUserApplication - Started WengalUserApplication in 3.628 seconds (JVM running for 4.891)
+[INFO ] 2020-04-25 03:26:29.360 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:26:29.361 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:26:29.369 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[WARN ] 2020-04-25 03:26:29.651 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [214] milliseconds.
+[INFO ] 2020-04-25 03:28:14.274 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 15592 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:28:14.288 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:28:14.849 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:28:14.925 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:28:15.367 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:28:15.375 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:28:15.376 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:28:15.377 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:28:15.378 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:28:15.381 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:28:15.382 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:28:15.382 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:28:15.386 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:28:15.517 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:28:15.518 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1199 ms
+[INFO ] 2020-04-25 03:28:15.649 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:28:15.713 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:28:15.825 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:28:15.915 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:28:16.071 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:28:16.096 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:28:16.786 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:28:16.793 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:28:17.078 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:28:17.186 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:28:17.188 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:28:17.189 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:28:17.189 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:28:17.189 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:28:17.190 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:28:17.190 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:28:17.190 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:28:17.190 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:28:17.190 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:28:17.193 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:28:17.194 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:28:17.194 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:28:17.194 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:28:17.358 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e4d93f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d3990a5, org.springframework.security.web.header.HeaderWriterFilter@2cbc2db2, org.springframework.web.filter.CorsFilter@3d1b43d8, org.springframework.security.web.authentication.logout.LogoutFilter@6e12f38c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c459194, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69cb134, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9f52eb7, org.springframework.security.web.session.SessionManagementFilter@220cda54, org.springframework.security.web.access.ExceptionTranslationFilter@fe38c0e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7120daa6]
+[INFO ] 2020-04-25 03:28:17.400 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:28:17.492 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:28:17.514 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:28:17.515 [main] WengalUserApplication - Started WengalUserApplication in 3.536 seconds (JVM running for 4.828)
+[INFO ] 2020-04-25 03:28:23.291 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:28:23.292 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:28:23.299 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[WARN ] 2020-04-25 03:28:23.626 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [213] milliseconds.
+[INFO ] 2020-04-25 03:28:23.630 [http-nio-8080-exec-1] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:28:23.633 [http-nio-8080-exec-1] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:28:23.958 [http-nio-8080-exec-1] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:28:23.961 [http-nio-8080-exec-1] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:28:30.958 [http-nio-8080-exec-2] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:29:02.716 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 29108 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:29:02.723 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:29:03.269 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:29:03.344 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:29:03.781 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:29:03.791 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:29:03.792 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:29:03.793 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:29:03.795 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:29:03.802 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:29:03.802 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:29:03.803 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:29:03.808 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:29:03.943 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:29:03.943 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1189 ms
+[INFO ] 2020-04-25 03:29:04.090 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:29:04.161 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:29:04.290 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:29:04.393 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:29:04.487 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:29:04.503 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:29:05.227 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:29:05.234 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:29:05.586 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2020-04-25 03:29:05.705 [main] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+[INFO ] 2020-04-25 03:29:05.709 [main] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2020-04-25 03:29:05.711 [main] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-04-25 03:29:05.753 [main] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-04-25 03:29:05.754 [main] StandardService - Stopping service [Tomcat]
+[INFO ] 2020-04-25 03:29:05.766 [main] ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[ERROR] 2020-04-25 03:29:05.774 [main] SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.project.WengalUserApplication.main(WengalUserApplication.java:10) [main/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 21 more
+Caused by: java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.util.Assert.state(Assert.java:73) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.antMatchers(AbstractRequestMatcherRegistry.java:122) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.project.config.SecurityConfig.configure(SecurityConfig.java:50) ~[main/:?]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.project.config.SecurityConfig$$EnhancerBySpringCGLIB$$d446b458.init(<generated>) ~[main/:?]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:370) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:324) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 21 more
+[INFO ] 2020-04-25 03:29:24.982 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 38376 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:29:24.998 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:29:25.560 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:29:25.640 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:29:26.083 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:29:26.092 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:29:26.093 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:29:26.093 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:29:26.095 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:29:26.098 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:29:26.098 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:29:26.098 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:29:26.102 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:29:26.227 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:29:26.227 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1192 ms
+[INFO ] 2020-04-25 03:29:26.364 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:29:26.428 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:29:26.544 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:29:26.636 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:29:26.744 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:29:26.764 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:29:27.511 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:29:27.518 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:29:27.837 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:29:27.949 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:29:27.952 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:29:27.952 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:29:27.952 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:29:27.952 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:29:27.953 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:29:27.953 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:29:27.953 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:29:27.953 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:29:27.953 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:29:27.957 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:29:27.957 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:29:27.957 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:29:27.957 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:29:28.123 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@703e5614, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a654e05, org.springframework.security.web.header.HeaderWriterFilter@21f479cd, org.springframework.web.filter.CorsFilter@627d5f99, org.springframework.security.web.authentication.logout.LogoutFilter@f98cff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d946eee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61d8a491, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44e3f3e5, org.springframework.security.web.session.SessionManagementFilter@4a86be01, org.springframework.security.web.access.ExceptionTranslationFilter@5a3be84, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17e6d07b]
+[INFO ] 2020-04-25 03:29:28.168 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:29:28.263 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:29:28.285 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:29:28.287 [main] WengalUserApplication - Started WengalUserApplication in 3.953 seconds (JVM running for 5.925)
+[INFO ] 2020-04-25 03:29:29.244 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:29:29.258 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:29:29.272 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 14 ms
+[WARN ] 2020-04-25 03:29:29.626 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [288] milliseconds.
+[INFO ] 2020-04-25 03:32:02.566 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 30792 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:32:02.580 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:32:03.153 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:32:03.235 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:32:03.675 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:32:03.684 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:32:03.685 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:32:03.686 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:32:03.688 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:32:03.690 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:32:03.691 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:32:03.691 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:32:03.696 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:32:03.850 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:32:03.850 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1235 ms
+[INFO ] 2020-04-25 03:32:03.991 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:32:04.060 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:32:04.179 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:32:04.283 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:32:04.410 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:32:04.424 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:32:05.172 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:32:05.180 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:32:05.499 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:32:05.617 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:32:05.620 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:32:05.620 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:32:05.621 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:32:05.621 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:32:05.621 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:32:05.621 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:32:05.622 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:32:05.622 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:32:05.622 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:32:05.625 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:32:05.625 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:32:05.626 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:32:05.626 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:32:05.825 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bad18f5, org.springframework.security.web.context.SecurityContextPersistenceFilter@b5311cb, org.springframework.security.web.header.HeaderWriterFilter@3acc65f0, org.springframework.web.filter.CorsFilter@4407fea2, org.springframework.security.web.authentication.logout.LogoutFilter@8f374de, com.project.util.JwtAuthenticationFilter@64e3bc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33a8f553, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b94c200, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54ed249f, org.springframework.security.web.session.SessionManagementFilter@5a9baba8, org.springframework.security.web.access.ExceptionTranslationFilter@795131d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@259c6ab8]
+[INFO ] 2020-04-25 03:32:05.876 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:32:05.976 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:32:05.995 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:32:05.997 [main] WengalUserApplication - Started WengalUserApplication in 3.725 seconds (JVM running for 5.069)
+[INFO ] 2020-04-25 03:32:08.628 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:32:08.629 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:32:08.637 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-04-25 03:32:08.667 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:32:08.667 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:32:08.667 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:32:08.671 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:32:08.705 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:32:08.706 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:32:08.706 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:32:08.706 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:33:19.147 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 20784 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:33:19.155 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:33:19.700 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:33:19.781 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:33:20.206 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:33:20.215 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:33:20.217 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:33:20.217 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:33:20.220 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:33:20.220 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:33:20.221 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:33:20.224 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:33:20.229 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:33:20.357 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:33:20.357 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1165 ms
+[INFO ] 2020-04-25 03:33:20.498 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:33:20.567 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:33:20.687 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:33:20.805 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:33:20.949 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:33:20.975 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:33:21.689 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:33:21.700 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:33:21.994 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:33:22.095 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:33:22.095 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:33:22.095 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:33:22.098 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:33:22.098 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:33:22.098 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:33:22.099 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:33:22.103 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:33:22.103 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:33:22.245 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c37ac3c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4eec5fa6, org.springframework.security.web.header.HeaderWriterFilter@212c0aff, org.springframework.web.filter.CorsFilter@2682cccc, org.springframework.security.web.authentication.logout.LogoutFilter@5a3be84, com.project.util.JwtAuthenticationFilter@2ae08750, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25b83dce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3703a400, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44117b0d, org.springframework.security.web.session.SessionManagementFilter@3c271988, org.springframework.security.web.access.ExceptionTranslationFilter@5cc669d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c3924fd]
+[INFO ] 2020-04-25 03:33:22.309 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:33:22.402 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:33:22.421 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:33:22.423 [main] WengalUserApplication - Started WengalUserApplication in 3.563 seconds (JVM running for 4.82)
+[INFO ] 2020-04-25 03:33:24.557 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:33:24.558 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:33:24.565 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-25 03:33:24.590 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:33:24.590 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:33:24.591 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:33:24.594 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:33:24.607 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:33:24.607 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:33:24.607 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:33:24.608 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:19.399 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 27120 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:35:19.406 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:35:19.975 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:35:20.076 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:35:20.553 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:35:20.563 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:35:20.564 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:35:20.565 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:35:20.567 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:35:20.567 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:35:20.568 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:35:20.570 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:35:20.575 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:35:20.693 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:35:20.693 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1256 ms
+[INFO ] 2020-04-25 03:35:20.846 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:35:20.930 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:35:21.057 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:35:21.156 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:35:21.309 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:35:21.335 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:35:22.000 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:35:22.014 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:35:22.321 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:35:22.441 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:35:22.441 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:35:22.441 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:35:22.444 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:35:22.444 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:35:22.445 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:35:22.445 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:35:22.445 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:35:22.445 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:35:22.446 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:35:22.446 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:35:22.446 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:35:22.450 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:35:22.450 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:35:22.624 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d41200c, org.springframework.security.web.context.SecurityContextPersistenceFilter@314c6f89, org.springframework.security.web.header.HeaderWriterFilter@220cda54, org.springframework.web.filter.CorsFilter@522fb69, org.springframework.security.web.authentication.logout.LogoutFilter@5c3924fd, com.project.util.JwtAuthenticationFilter@593354fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52b30dcd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59ec5a0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dfebd2a, org.springframework.security.web.session.SessionManagementFilter@69cb134, org.springframework.security.web.access.ExceptionTranslationFilter@2c3b0cc8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55cb3b7]
+[INFO ] 2020-04-25 03:35:22.688 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:35:22.829 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:35:22.853 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:35:22.855 [main] WengalUserApplication - Started WengalUserApplication in 3.756 seconds (JVM running for 5.098)
+[INFO ] 2020-04-25 03:35:24.708 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:35:24.709 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:35:24.715 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 5 ms
+[INFO ] 2020-04-25 03:35:24.740 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:24.741 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:24.741 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:24.744 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:24.758 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:24.758 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:24.758 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:24.758 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:50.155 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:50.155 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:50.155 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:50.155 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:50.159 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:50.160 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:50.160 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:50.160 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:58.823 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:58.823 [http-nio-8080-exec-3] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:58.824 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:58.824 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:58.824 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:35:58.827 [http-nio-8080-exec-3] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:35:58.828 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:35:58.828 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:36:47.103 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 20356 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:36:47.110 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:36:47.716 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:36:47.790 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:36:48.254 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:36:48.268 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:36:48.269 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:36:48.270 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:36:48.271 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:36:48.272 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:36:48.272 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:36:48.272 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:36:48.276 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:36:48.397 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:36:48.397 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1249 ms
+[INFO ] 2020-04-25 03:36:48.535 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:36:48.603 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:36:48.719 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:36:48.814 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:36:49.006 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:36:49.025 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:36:49.689 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:36:49.710 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:36:50.040 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:36:50.145 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:36:50.145 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:36:50.146 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:36:50.146 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:36:50.146 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:36:50.146 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:36:50.149 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:36:50.149 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:36:50.149 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:36:50.149 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:36:50.149 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:36:50.150 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:36:50.150 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:36:50.150 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:36:50.327 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b780b5c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a97517, org.springframework.security.web.header.HeaderWriterFilter@5a9baba8, org.springframework.web.filter.CorsFilter@3c7db0e8, org.springframework.security.web.authentication.logout.LogoutFilter@7c6ab057, com.project.util.JwtAuthenticationFilter@84becbe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65021bb4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50a1af86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13dc383b, org.springframework.security.web.session.SessionManagementFilter@6b94c200, org.springframework.security.web.access.ExceptionTranslationFilter@6e12f38c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e2cd42c]
+[INFO ] 2020-04-25 03:36:50.369 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:36:50.459 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:36:50.479 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:36:50.481 [main] WengalUserApplication - Started WengalUserApplication in 3.68 seconds (JVM running for 5.063)
+[INFO ] 2020-04-25 03:36:52.316 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:36:52.316 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:36:52.323 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-25 03:36:52.348 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:36:52.349 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:36:52.349 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:36:52.352 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[WARN ] 2020-04-25 03:36:52.631 [http-nio-8080-exec-1] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [188] milliseconds.
+[INFO ] 2020-04-25 03:36:52.636 [http-nio-8080-exec-1] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:36:52.637 [http-nio-8080-exec-1] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:36:52.945 [http-nio-8080-exec-1] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:36:52.948 [http-nio-8080-exec-1] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:37:08.612 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:37:08.612 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:37:08.612 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:37:08.613 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:37:08.614 [http-nio-8080-exec-2] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:38:08.583 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 24828 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:38:08.592 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:38:09.222 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:38:09.302 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:38:09.742 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:38:09.750 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:38:09.751 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:38:09.752 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:38:09.754 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:38:09.754 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:38:09.754 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:38:09.755 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:38:09.762 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:38:09.884 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:38:09.884 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1257 ms
+[INFO ] 2020-04-25 03:38:10.024 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:38:10.091 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:38:10.206 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:38:10.300 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:38:10.413 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:38:10.459 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:38:11.146 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:38:11.156 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:38:11.465 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:38:11.579 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:38:11.579 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:38:11.579 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:38:11.579 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:38:11.579 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:38:11.582 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:38:11.582 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:38:11.582 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:38:11.583 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:38:11.583 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:38:11.583 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:38:11.583 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:38:11.584 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:38:11.584 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:38:11.760 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b028f58, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d3990a5, org.springframework.security.web.header.HeaderWriterFilter@2cbc2db2, org.springframework.web.filter.CorsFilter@1e4d93f7, org.springframework.security.web.authentication.logout.LogoutFilter@6e12f38c, com.project.util.JwtAuthenticationFilter@3d1b43d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c459194, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69cb134, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9f52eb7, org.springframework.security.web.session.SessionManagementFilter@220cda54, org.springframework.security.web.access.ExceptionTranslationFilter@fe38c0e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7120daa6]
+[INFO ] 2020-04-25 03:38:11.803 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:38:11.897 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:38:11.918 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:38:11.920 [main] WengalUserApplication - Started WengalUserApplication in 3.68 seconds (JVM running for 5.057)
+[INFO ] 2020-04-25 03:38:13.056 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:38:13.058 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:38:13.065 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 7 ms
+[INFO ] 2020-04-25 03:38:13.085 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:38:13.085 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:38:13.086 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:13.089 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:13.103 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:38:13.103 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:38:13.103 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:13.103 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:36.994 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 10936 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:38:37.003 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:38:37.551 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:38:37.634 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:38:38.072 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:38:38.082 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:38:38.083 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:38:38.084 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:38:38.087 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:38:38.087 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:38:38.087 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:38:38.091 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:38:38.095 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:38:38.215 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:38:38.215 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1180 ms
+[INFO ] 2020-04-25 03:38:38.365 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:38:38.432 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:38:38.581 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:38:38.677 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:38:38.770 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:38:38.800 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:38:39.480 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:38:39.493 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:38:39.807 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:38:39.916 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:38:39.916 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:38:39.916 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:38:39.919 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:38:39.919 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:38:39.919 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:38:39.920 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:38:39.924 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:38:39.924 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:38:40.090 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76673ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a7fc4c1, org.springframework.security.web.header.HeaderWriterFilter@6d946eee, org.springframework.web.filter.CorsFilter@6d41200c, org.springframework.security.web.authentication.logout.LogoutFilter@8636cf4, com.project.util.JwtAuthenticationFilter@522fb69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b1170f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7146c6ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@593354fa, org.springframework.security.web.session.SessionManagementFilter@550f522b, org.springframework.security.web.access.ExceptionTranslationFilter@5a654e05, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fbbd98c]
+[INFO ] 2020-04-25 03:38:40.135 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:38:40.236 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:38:40.257 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:38:40.258 [main] WengalUserApplication - Started WengalUserApplication in 3.56 seconds (JVM running for 4.867)
+[INFO ] 2020-04-25 03:38:42.242 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:38:42.243 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:38:42.249 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-25 03:38:42.273 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:38:42.273 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:38:42.273 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:42.277 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:42.297 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:38:42.297 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:38:42.297 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:42.298 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:48.543 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:38:48.543 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:38:48.543 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:38:48.544 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[WARN ] 2020-04-25 03:38:48.749 [http-nio-8080-exec-2] SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [167] milliseconds.
+[INFO ] 2020-04-25 03:38:48.754 [http-nio-8080-exec-2] UserAccountService - Login email : ekfrl2815@gmail.com, password : aaa
+[INFO ] 2020-04-25 03:38:48.754 [http-nio-8080-exec-2] UserAccountService - Login Token : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@1bf035cb: Principal: ekfrl2815@gmail.com; Credentials: [PROTECTED]; Authenticated: false; Details: null; Not granted any authorities
+[INFO ] 2020-04-25 03:38:49.057 [http-nio-8080-exec-2] UserAccountService - authentication : org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5fec4fa5: Principal: org.springframework.security.core.userdetails.User@1bf14d95: Username: ekfrl2815@gmail.com; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER
+[INFO ] 2020-04-25 03:38:49.060 [http-nio-8080-exec-2] JwtTokenProvider - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:39:16.270 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:39:16.270 [http-nio-8080-exec-3] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:39:16.271 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:39:16.271 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:39:16.272 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:39:16.272 [http-nio-8080-exec-3] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:39:16.273 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:39:16.273 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:40:15.842 [http-nio-8080-exec-4] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:40:15.845 [http-nio-8080-exec-4] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:40:15.845 [http-nio-8080-exec-4] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:40:15.845 [http-nio-8080-exec-4] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:40:15.846 [http-nio-8080-exec-4] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:40:15.846 [http-nio-8080-exec-4] JwtAuthenticationFilter - token is invalid>>>>>>>
+[INFO ] 2020-04-25 03:40:15.847 [http-nio-8080-exec-4] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:40:15.847 [http-nio-8080-exec-4] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:40:47.376 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 15704 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:40:47.383 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:40:47.969 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:40:48.045 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:40:48.473 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:40:48.481 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:40:48.482 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:40:48.483 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:40:48.485 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:40:48.485 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:40:48.485 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:40:48.488 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:40:48.493 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:40:48.608 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:40:48.608 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1183 ms
+[INFO ] 2020-04-25 03:40:48.743 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:40:48.811 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:40:48.925 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:40:49.023 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:40:49.179 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:40:49.209 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:40:49.885 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:40:49.894 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:40:50.222 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:40:50.363 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:40:50.364 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:40:50.364 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:40:50.367 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:40:50.367 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:40:50.367 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:40:50.367 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:40:50.368 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:40:50.368 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:40:50.368 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:40:50.368 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:40:50.368 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:40:50.372 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:40:50.372 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:40:50.575 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25ee3caa, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e514482, org.springframework.security.web.header.HeaderWriterFilter@353422fd, org.springframework.web.filter.CorsFilter@3fecb076, org.springframework.security.web.authentication.logout.LogoutFilter@68543a35, com.project.util.JwtAuthenticationFilter@62159fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c271988, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66a99584, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e8dee7, org.springframework.security.web.session.SessionManagementFilter@44dcc0e4, org.springframework.security.web.access.ExceptionTranslationFilter@25e8a111, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7204d98f]
+[INFO ] 2020-04-25 03:40:50.622 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:40:50.720 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:40:50.741 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:40:50.743 [main] WengalUserApplication - Started WengalUserApplication in 3.673 seconds (JVM running for 4.989)
+[INFO ] 2020-04-25 03:40:59.187 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:40:59.188 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:40:59.195 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-25 03:40:59.215 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:40:59.294 [http-nio-8080-exec-1] JwtTokenProvider - getUserPk >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:40:59.503 [http-nio-8080-exec-1] JwtTokenProvider - getAuthentication >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:40:59.505 [http-nio-8080-exec-1] JwtAuthenticationFilter - token dofilter >>>>>>>
+[INFO ] 2020-04-25 03:40:59.506 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:40:59.506 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:40:59.522 [http-nio-8080-exec-1] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:41:03.386 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:41:03.386 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[INFO ] 2020-04-25 03:41:03.389 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:41:03.389 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:41:03.397 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:41:03.397 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[INFO ] 2020-04-25 03:41:03.397 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:41:03.398 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:41:11.013 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:41:11.014 [http-nio-8080-exec-3] JwtTokenProvider - getUserPk >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:41:11.047 [http-nio-8080-exec-3] JwtTokenProvider - getAuthentication >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:41:11.050 [http-nio-8080-exec-3] JwtAuthenticationFilter - token dofilter >>>>>>>
+[INFO ] 2020-04-25 03:41:11.050 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:41:11.050 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:41:11.051 [http-nio-8080-exec-3] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:41:58.603 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 16980 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:41:58.617 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:41:59.172 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:41:59.247 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:41:59.691 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:41:59.699 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:41:59.700 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:41:59.701 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:41:59.703 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:41:59.703 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:41:59.703 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:41:59.706 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:41:59.711 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:41:59.831 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:41:59.832 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1176 ms
+[INFO ] 2020-04-25 03:41:59.970 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:42:00.047 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:42:00.167 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:42:00.260 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:42:00.351 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:42:00.373 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:42:01.059 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:42:01.068 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:42:01.402 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:42:01.522 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:42:01.522 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:42:01.522 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:42:01.525 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:42:01.525 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:42:01.525 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:42:01.525 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:42:01.526 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:42:01.526 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:42:01.526 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:42:01.526 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:42:01.527 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:42:01.530 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:42:01.530 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:42:01.709 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@452e2210, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f2f92f, org.springframework.security.web.header.HeaderWriterFilter@7c9512c6, org.springframework.web.filter.CorsFilter@18c0f025, org.springframework.security.web.authentication.logout.LogoutFilter@1f013047, com.project.util.JwtAuthenticationFilter@684f7f1c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@240291d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6765b6a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a013bdd, org.springframework.security.web.session.SessionManagementFilter@291028d7, org.springframework.security.web.access.ExceptionTranslationFilter@7204d98f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6958d5d0]
+[INFO ] 2020-04-25 03:42:01.754 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:42:01.851 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:42:01.872 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:42:01.874 [main] WengalUserApplication - Started WengalUserApplication in 3.566 seconds (JVM running for 4.875)
+[INFO ] 2020-04-25 03:42:04.850 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:42:04.851 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:42:04.857 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2020-04-25 03:42:04.882 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:04.957 [http-nio-8080-exec-1] JwtTokenProvider - getUserPk >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:05.123 [http-nio-8080-exec-1] JwtTokenProvider - getAuthentication >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:05.127 [http-nio-8080-exec-1] JwtAuthenticationFilter - token dofilter >>>>>>>
+[INFO ] 2020-04-25 03:42:05.127 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:42:05.127 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:42:05.144 [http-nio-8080-exec-1] UserController - tesetSuccess
+[INFO ] 2020-04-25 03:42:08.455 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:08.456 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[ERROR] 2020-04-25 03:42:08.461 [http-nio-8080-exec-2] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/user/api/v1] threw exception
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[INFO ] 2020-04-25 03:42:08.471 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:08.475 [http-nio-8080-exec-2] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[ERROR] 2020-04-25 03:42:08.475 [http-nio-8080-exec-2] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[ERROR] 2020-04-25 03:42:08.478 [http-nio-8080-exec-2] [localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[INFO ] 2020-04-25 03:42:51.592 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 21224 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:42:51.606 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:42:52.171 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:42:52.248 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:42:52.674 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:42:52.685 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:42:52.685 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:42:52.686 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:42:52.688 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:42:52.690 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:42:52.691 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:42:52.691 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:42:52.695 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:42:52.815 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:42:52.815 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1171 ms
+[INFO ] 2020-04-25 03:42:52.955 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:42:53.029 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:42:53.152 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:42:53.247 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:42:53.340 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:42:53.353 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:42:53.993 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:42:54.007 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:42:54.306 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:42:54.410 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:42:54.413 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:42:54.413 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:42:54.414 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:42:54.414 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:42:54.414 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:42:54.414 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:42:54.414 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:42:54.415 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:42:54.415 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:42:54.418 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:42:54.418 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:42:54.418 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:42:54.419 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:42:54.554 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3462e99a, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c459194, org.springframework.security.web.header.HeaderWriterFilter@3ef914f5, org.springframework.web.filter.CorsFilter@5300694d, org.springframework.security.web.authentication.logout.LogoutFilter@5a9baba8, com.project.util.JwtAuthenticationFilter@7320750c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6065bcb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@314c6f89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2570851e, org.springframework.security.web.session.SessionManagementFilter@4d3990a5, org.springframework.security.web.access.ExceptionTranslationFilter@2cbc2db2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6787bd41]
+[INFO ] 2020-04-25 03:42:54.624 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:42:54.722 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:42:54.744 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:42:54.745 [main] WengalUserApplication - Started WengalUserApplication in 3.45 seconds (JVM running for 4.881)
+[INFO ] 2020-04-25 03:42:56.113 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:42:56.113 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:42:56.122 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-04-25 03:42:56.144 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:56.144 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[ERROR] 2020-04-25 03:42:56.147 [http-nio-8080-exec-1] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/user/api/v1] threw exception
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[INFO ] 2020-04-25 03:42:56.162 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:42:56.165 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[ERROR] 2020-04-25 03:42:56.165 [http-nio-8080-exec-1] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[ERROR] 2020-04-25 03:42:56.168 [http-nio-8080-exec-1] [localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+com.project.exception.ServiceException: null
+	at com.project.util.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:42) ~[main/:?]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[INFO ] 2020-04-25 03:43:06.548 [main] WengalUserApplication - Starting WengalUserApplication on DESKTOP-4RHPOK5 with PID 12672 (C:\workspace\java\wengal-user\build\classes\java\main started by minkyu in C:\workspace\java\wengal-user)
+[INFO ] 2020-04-25 03:43:06.562 [main] WengalUserApplication - The following profiles are active: local
+[INFO ] 2020-04-25 03:43:07.143 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2020-04-25 03:43:07.229 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78ms. Found 3 JPA repository interfaces.
+[INFO ] 2020-04-25 03:43:07.662 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-04-25 03:43:07.670 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:43:07.671 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-04-25 03:43:07.672 [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+[INFO ] 2020-04-25 03:43:07.674 [main] AprLifecycleListener - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+[INFO ] 2020-04-25 03:43:07.676 [main] AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+[INFO ] 2020-04-25 03:43:07.677 [main] AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2020-04-25 03:43:07.677 [main] AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2020-04-25 03:43:07.681 [main] AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+[INFO ] 2020-04-25 03:43:07.794 [main] [/user/api/v1] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-04-25 03:43:07.794 [main] ContextLoader - Root WebApplicationContext: initialization completed in 1201 ms
+[INFO ] 2020-04-25 03:43:07.944 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2020-04-25 03:43:08.012 [main] Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+[INFO ] 2020-04-25 03:43:08.134 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[INFO ] 2020-04-25 03:43:08.232 [main] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2020-04-25 03:43:08.344 [main] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2020-04-25 03:43:08.374 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[INFO ] 2020-04-25 03:43:09.141 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2020-04-25 03:43:09.150 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2020-04-25 03:43:09.477 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2020-04-25 03:43:09.590 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resources/**'], []
+[INFO ] 2020-04-25 03:43:09.592 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO ] 2020-04-25 03:43:09.592 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/script/**'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='image/**'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='fonts/**'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='lib/**'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/user/api/v1/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+[INFO ] 2020-04-25 03:43:09.593 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+[INFO ] 2020-04-25 03:43:09.594 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+[INFO ] 2020-04-25 03:43:09.597 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+[INFO ] 2020-04-25 03:43:09.597 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+[INFO ] 2020-04-25 03:43:09.597 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/ui'], []
+[INFO ] 2020-04-25 03:43:09.597 [main] DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='configuration/security'], []
+[INFO ] 2020-04-25 03:43:09.762 [main] DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39296cef, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e12f38c, org.springframework.security.web.header.HeaderWriterFilter@7146c6ea, org.springframework.web.filter.CorsFilter@7dfca9e6, org.springframework.security.web.authentication.logout.LogoutFilter@5516ee5, com.project.util.JwtAuthenticationFilter@7771c4e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a9baba8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b79df53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@113a6636, org.springframework.security.web.session.SessionManagementFilter@26a202ae, org.springframework.security.web.access.ExceptionTranslationFilter@29e3c28, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49c4118b]
+[INFO ] 2020-04-25 03:43:09.804 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-04-25 03:43:09.898 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-04-25 03:43:09.918 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-04-25 03:43:09.919 [main] WengalUserApplication - Started WengalUserApplication in 3.67 seconds (JVM running for 5.02)
+[INFO ] 2020-04-25 03:43:10.480 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:43:10.480 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-04-25 03:43:10.502 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 21 ms
+[INFO ] 2020-04-25 03:43:10.523 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:43:10.524 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[INFO ] 2020-04-25 03:43:10.524 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:43:10.526 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:43:10.540 [http-nio-8080-exec-1] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:43:10.540 [http-nio-8080-exec-1] JwtAuthenticationFilter - token is invalid>>>>>>> : null
+[INFO ] 2020-04-25 03:43:10.540 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:43:10.540 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-04-25 03:43:15.029 [http-nio-8080-exec-2] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:43:15.084 [http-nio-8080-exec-2] JwtTokenProvider - getUserPk >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:43:15.248 [http-nio-8080-exec-2] JwtTokenProvider - getAuthentication >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-04-25 03:43:15.248 [http-nio-8080-exec-2] JwtAuthenticationFilter - token dofilter >>>>>>>
+[INFO ] 2020-04-25 03:43:15.251 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:43:15.251 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4Nzc1MzUyOSwiZXhwIjoxNTg3NzU3MTI5fQ.f0uq3yXHKQiLkIYmzKI9MmjbwnnEaMTNb8H7Nx0lfg4
+[INFO ] 2020-04-25 03:43:15.253 [http-nio-8080-exec-2] UserController - tesetSuccess

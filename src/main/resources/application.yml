@@ -3,6 +3,9 @@ spring:
     active: local
 
 ---
+jwt:
+  secret: dkqjwlrkqkddpemfdjrktlsek
+---
 logging:
   config: classpath:log4j2.yml
 ---
