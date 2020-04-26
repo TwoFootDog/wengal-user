@@ -29,6 +29,8 @@ public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
     private long tokenValidMilisecond = 1000L * 60 * 60;    // 토큰 유효시간 : 1시간
 
     private final UserAuthorityService userAuthorityService;
+//    @Autowired
+//    private CookieUtil cookieUtil;
 
     @Autowired
     public JwtTokenProvider(UserAuthorityService userAuthorityService) {
@@ -73,9 +75,10 @@ public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
     }
 
     // Request Header에서 token 파싱 : "X-AUTH-TOKEN : Jwt 토큰"
-    public String resolveToken(HttpServletRequest req) {
+    public String resolveToken(HttpServletRequest req, String jwtCookieName) {
         log.info("resolveToken >>>>>>>>>>>>>>>>>>>>>>");
-        return req.getHeader("X-AUTH-TOKEN");
+        return CookieUtil.getValue(req, jwtCookieName);
+//        return req.getHeader("X-AUTH-TOKEN");
     }
 
     // Jwt 토큰의 유효성 + 만료일자 확인

@@ -2,11 +2,17 @@ package com.project.application.controller;
 
 import com.project.domain.user.model.dto.*;
 import com.project.domain.user.service.UserAccountService;
+import com.project.util.CookieUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
@@ -20,9 +26,25 @@ public class UserController {
         this.userAccountService = userAccountService;
     }
 
+//    @PostMapping("/login")
+//    public ResponseEntity<String> login(HttpServletResponse response, @RequestBody LoginRequest request, HttpSession httpSession) {
+////        CookieUtil.create(response, "aaa", "bb", false, -1, "localhost");
+//        Cookie cookie = new Cookie("name", "value");
+//        cookie.setDomain("localhost");
+//        cookie.setPath("/");        // visible all path
+//        response.addCookie(cookie);
+//        HttpHeaders httpHeaders = new HttpHeaders();
+//        return new ResponseEntity<String>("aa", httpHeaders, HttpStatus.OK);
+//    }
+
     @PostMapping("/login")
-    public SingleResult<LoginResult> login(@RequestBody LoginRequest request, HttpSession httpSession) {
-        return userAccountService.login(request, httpSession);
+    public SingleResult<LoginResult> login(HttpServletResponse response,  @RequestBody LoginRequest request, HttpSession httpSession) {
+////        CookieUtil.create(response, "aaa", "bb", false, -1, "localhost");
+//        Cookie cookie = new Cookie("name", "value");
+//        cookie.setDomain("localhost");
+//        response.addCookie(cookie);
+//        cookie.setPath("/");        // visible all path
+        return userAccountService.login(response, request, httpSession);
     }
 
     @PostMapping("/user")

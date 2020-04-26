@@ -6,10 +6,12 @@ import com.project.domain.user.model.entity.UserAuthority;
 import com.project.domain.user.repository.UserAccountRepository;
 import com.project.domain.user.repository.UserAuthorityRepository;
 import com.project.exception.ServiceException;
+import com.project.util.CookieUtil;
 import com.project.util.JwtTokenProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -20,6 +22,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
 
@@ -27,11 +30,17 @@ import java.util.Date;
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
+//    @Value("jwt.cookieName")
+    private String jwtCookieName = "X-AUTH-TOKEN";
+
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
     private final JwtTokenProvider jwtTokenProvider;
     private final AuthenticationManager authenticationManager;
+
+//    @Autowired
+//    private CookieUtil cookieUtil;
 
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
@@ -45,7 +54,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     }
 
     /* 로그인 함수 */
-    public SingleResult<LoginResult> login(LoginRequest request, HttpSession httpSession) {
+    public SingleResult<LoginResult> login(HttpServletResponse response, LoginRequest request, HttpSession httpSession) {
 
         String email = request.getEmail();
         String password = request.getPassword();
@@ -69,10 +78,13 @@ public class UserAccountServiceImpl implements UserAccountService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         /* Session의 속성값에 SecurityContext값을 넣어줌 */
-        httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
+        //httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
         /* JWT Token 생성 */
         String jwt = jwtTokenProvider.generateToken(authentication);
+
+        /* 쿠키 생성 */
+        CookieUtil.create(response, jwtCookieName, jwt, false, -1, "localhost");
 
         return getSingleResult(new LoginResult(authentication.getName(), jwt));
     }
