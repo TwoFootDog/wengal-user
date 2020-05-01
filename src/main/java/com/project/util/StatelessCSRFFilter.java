@@ -19,8 +19,8 @@ import java.util.regex.Pattern;
 /* Double Submit Cookie 검증 패턴으로 CSRF 방어로직 구현 */
 //@Component
 public class StatelessCSRFFilter extends OncePerRequestFilter {
-    public static final String X_CSRF_TOKEN_HEADER = "X-CSRF-TOKEN";
-    public static final String CSRF_TOKEN_COOKIE = "CSRF_TOKEN";
+    private static final String HEADER_CSRF_TOKEN = "X-CSRF-TOKEN";
+    private static final String COOKIE_CSRF_TOKEN = "CSRF_TOKEN";
     private static final int EXPIRE = 0;
     private final RequestMatcher requireCsrfProtectionMatcher = new DefaultRequiresCsrfMatcher();
     private final AccessDeniedHandler accessDeniedHandler = new AccessDeniedHandlerImpl();
@@ -30,12 +30,12 @@ public class StatelessCSRFFilter extends OncePerRequestFilter {
         logger.info("StatelessCSRFFilter>>>>");
         if (requireCsrfProtectionMatcher.matches(request)) {
             logger.info("requireCsrfProtectionMatcher.matches(request)");
-            final String csrfHeaderToken = request.getHeader(X_CSRF_TOKEN_HEADER);
+            final String csrfHeaderToken = request.getHeader(HEADER_CSRF_TOKEN);
             final Cookie[] cookies = request.getCookies();
 
             String csrfCookieToken = null;
             if (cookies != null) {
-                Cookie cookie  = WebUtils.getCookie(request, CSRF_TOKEN_COOKIE);
+                Cookie cookie  = WebUtils.getCookie(request, COOKIE_CSRF_TOKEN);
                 csrfCookieToken = cookie.getValue();
 /*                for (Cookie cookie : cookies) {
                     if (cookie.getName().equals(CSRF_TOKEN_COOKIE)) {
@@ -56,7 +56,7 @@ public class StatelessCSRFFilter extends OncePerRequestFilter {
 
     /* 쿠키 만료처리 시키는 함수 */
     private void invalidate(HttpServletResponse response) {
-        Cookie cookie = new Cookie(CSRF_TOKEN_COOKIE, "");
+        Cookie cookie = new Cookie(COOKIE_CSRF_TOKEN, "");
         cookie.setMaxAge(EXPIRE);
         response.addCookie(cookie);
     }
@@ -67,7 +67,6 @@ public class StatelessCSRFFilter extends OncePerRequestFilter {
         private final Pattern allowedMethods = Pattern.compile("^(GET|HEAD|TRACE|OPTIONS)$");
         private final Pattern allowedURI = Pattern.compile(contextRoot+"/login|"+
                                                            contextRoot+"/user1");
-
 
         @Override
         public boolean matches(HttpServletRequest request) {

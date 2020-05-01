@@ -18,8 +18,7 @@ import java.io.IOException;
 //@Slf4j
 public class JwtAuthenticationFilter extends GenericFilterBean {    // Jwt가 유효한 토큰인지 인증하기 위한 Fillter
 
-//    @Value("jwt.cookieName")
-    private String jwtCookieName = "X-AUTH-TOKEN";
+    private static final String JWT_COOKIE_NAME = "X-AUTH-TOKEN";
 
     Logger logger = LogManager.getLogger(JwtAuthenticationFilter.class);
     private final JwtTokenUtil jwtTokenUtil;
@@ -31,7 +30,7 @@ public class JwtAuthenticationFilter extends GenericFilterBean {    // Jwt가 �
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String token  = jwtTokenUtil.resolveToken((HttpServletRequest)request, jwtCookieName);
+        String token  = jwtTokenUtil.resolveToken((HttpServletRequest)request, JWT_COOKIE_NAME);
         if (token != null && jwtTokenUtil.validateToken(token)) {
                 Authentication authentication = jwtTokenUtil.getAuthentication(token);
                 SecurityContextHolder.getContext().setAuthentication(authentication);

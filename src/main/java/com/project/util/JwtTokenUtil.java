@@ -13,16 +13,11 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Component;
-import org.springframework.web.util.WebUtils;
+
 
 import javax.annotation.PostConstruct;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.Base64;
 import java.util.Date;
 
@@ -30,32 +25,25 @@ import java.util.Date;
 @Slf4j
 public class JwtTokenUtil { // Jwt 토큰 생성 및 검증 모듈
 
-    @Value("jwt.secret")
+    @Value("${jwt.secret}")
     private String secretKey;
 
     private long tokenValidMilisecond = 1000L * 60 * 60;    // 토큰 유효시간 : 1시간
-
     private final UserAuthorityService userAuthorityService;
-//    @Autowired
-//    private CookieUtil cookieUtil;
 
     @Autowired
     public JwtTokenUtil(UserAuthorityService userAuthorityService) {
         this.userAuthorityService = userAuthorityService;
     }
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
     @PostConstruct
-    protected void init() {
+    protected void init() { // was 기동 시 호출
+        log.info("secretKey >>>>>: " + secretKey);
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
     }
 
     // Jwt 토큰 생성
     public String generateToken(Authentication authentication) {
-//        Claims claims = Jwts.claims().setSubject(memberVO.getUserId());
-//        claims.put("roles", memberVO.getMemberRole());
         Claims claims = Jwts.claims().setSubject(authentication.getName());
         claims.put("authority", authentication.getAuthorities());
         Date nowDate = new Date();

@@ -1,1 +1,4 @@
-[INFO ] 2020-05-02 01:04:04.475 [http-nio-8080-exec-2] JwtTokenUtil - generateToken >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-05-02 02:34:03.125 [main] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-02 02:34:03.223 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-02 02:34:03.242 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/user/api/v1'
+[INFO ] 2020-05-02 02:34:03.244 [main] WengalUserApplication - Started WengalUserApplication in 3.799 seconds (JVM running for 5.266)

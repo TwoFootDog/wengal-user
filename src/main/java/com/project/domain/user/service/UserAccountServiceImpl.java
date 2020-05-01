@@ -37,9 +37,6 @@ public class UserAccountServiceImpl implements UserAccountService {
     private final JwtTokenUtil jwtTokenUtil;
     private final AuthenticationManager authenticationManager;
 
-//    @Autowired
-//    private CookieUtil cookieUtil;
-
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
                                   UserAuthorityRepository userAuthorityRepository,
