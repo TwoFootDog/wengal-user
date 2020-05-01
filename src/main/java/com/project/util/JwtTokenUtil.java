@@ -9,19 +9,26 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Component;
+import org.springframework.web.util.WebUtils;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Base64;
 import java.util.Date;
 
 @Component
 @Slf4j
-public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
+public class JwtTokenUtil { // Jwt 토큰 생성 및 검증 모듈
 
     @Value("jwt.secret")
     private String secretKey;
@@ -33,9 +40,12 @@ public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
 //    private CookieUtil cookieUtil;
 
     @Autowired
-    public JwtTokenProvider(UserAuthorityService userAuthorityService) {
+    public JwtTokenUtil(UserAuthorityService userAuthorityService) {
         this.userAuthorityService = userAuthorityService;
     }
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     @PostConstruct
     protected void init() {
@@ -62,9 +72,6 @@ public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = userAuthorityService.loadUserByUsername(this.getUserPk(token));
         log.info("getAuthentication >>>>>>>>>>>>>>>>>>>>>>");
-//        UsernamePasswordAuthenticationToken token1 = new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
-//        Authentication authentication = authenticationManager.authenticate(token1);
-//        return authentication;
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
@@ -75,12 +82,11 @@ public class JwtTokenProvider { // Jwt 토큰 생성 및 검증 모듈
     }
 
     // Request Header에서 token 파싱 : "X-AUTH-TOKEN : Jwt 토큰"
-    public String resolveToken(HttpServletRequest req, String jwtCookieName) {
+    public String resolveToken(HttpServletRequest request, String jwtCookieName) {
         log.info("resolveToken >>>>>>>>>>>>>>>>>>>>>>");
-        return CookieUtil.getValue(req, jwtCookieName);
+        return CookieUtil.getValue(request, jwtCookieName);
 //        return req.getHeader("X-AUTH-TOKEN");
     }
-
     // Jwt 토큰의 유효성 + 만료일자 확인
     public boolean validateToken(String token) {
         try {

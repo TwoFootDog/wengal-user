@@ -7,11 +7,10 @@ import com.project.domain.user.repository.UserAccountRepository;
 import com.project.domain.user.repository.UserAuthorityRepository;
 import com.project.exception.ServiceException;
 import com.project.util.CookieUtil;
-import com.project.util.JwtTokenProvider;
+import com.project.util.JwtTokenUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -19,7 +18,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletResponse;
@@ -36,7 +34,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
-    private final JwtTokenProvider jwtTokenProvider;
+    private final JwtTokenUtil jwtTokenUtil;
     private final AuthenticationManager authenticationManager;
 
 //    @Autowired
@@ -45,11 +43,11 @@ public class UserAccountServiceImpl implements UserAccountService {
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
                                   UserAuthorityRepository userAuthorityRepository,
-                                  JwtTokenProvider jwtTokenProvider,
+                                  JwtTokenUtil jwtTokenUtil,
                                   AuthenticationManager authenticationManager) {
         this.userAccountRepository = userAccountRepository;
         this.userAuthorityRepository = userAuthorityRepository;
-        this.jwtTokenProvider = jwtTokenProvider;
+        this.jwtTokenUtil = jwtTokenUtil;
         this.authenticationManager = authenticationManager;
     }
 
@@ -63,7 +61,7 @@ public class UserAccountServiceImpl implements UserAccountService {
         Authentication authentication = null;
         logger.info("Login Token : " + token);
         try {
-            authentication = authenticationManager.authenticate(token);  // userAuthService의 loadUserByUsername 호출
+            authentication = authenticationManager.authenticate(token);  // userAuthorityService의 loadUserByUsername 호출
             logger.info("authentication : " + authentication);
         } catch (InternalAuthenticationServiceException e) {
             throw new ServiceException(false, -1, "계정정보가 존재하지 않습니다", e);
@@ -81,7 +79,7 @@ public class UserAccountServiceImpl implements UserAccountService {
         //httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
         /* JWT Token 생성 */
-        String jwt = jwtTokenProvider.generateToken(authentication);
+        String jwt = jwtTokenUtil.generateToken(authentication);
 
         /* 쿠키 생성 */
         CookieUtil.create(response, jwtCookieName, jwt, false, -1, "localhost");

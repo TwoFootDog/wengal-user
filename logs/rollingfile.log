@@ -1,7 +1,1 @@
-[INFO ] 2020-04-26 21:46:56.503 [http-nio-8080-exec-3] JwtTokenProvider - resolveToken >>>>>>>>>>>>>>>>>>>>>>
-[INFO ] 2020-04-26 21:46:56.507 [http-nio-8080-exec-3] JwtTokenProvider - getUserPk >>>>>>>>>>>>>>>>>>>>>>
-[INFO ] 2020-04-26 21:46:56.535 [http-nio-8080-exec-3] JwtTokenProvider - getAuthentication >>>>>>>>>>>>>>>>>>>>>>
-[INFO ] 2020-04-26 21:46:56.535 [http-nio-8080-exec-3] JwtAuthenticationFilter - token dofilter >>>>>>>
-[INFO ] 2020-04-26 21:46:56.535 [http-nio-8080-exec-3] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4NzkwNTEzNSwiZXhwIjoxNTg3OTA4NzM1fQ.YkvNzjgJcg5vyQz7x8bhW6EjaYkN43R8haK9ojevXbE
-[INFO ] 2020-04-26 21:46:56.535 [http-nio-8080-exec-3] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
-[INFO ] 2020-04-26 21:46:56.536 [http-nio-8080-exec-3] UserController - tesetSuccess
+[INFO ] 2020-05-02 01:04:04.475 [http-nio-8080-exec-2] JwtTokenUtil - generateToken >>>>>>>>>>>>>>>>>>>>>>

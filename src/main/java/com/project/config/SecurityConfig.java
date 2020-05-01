@@ -1,8 +1,10 @@
 package com.project.config;
 
 import com.project.domain.user.service.UserAuthorityService;
-import com.project.util.JwtAuthenticationFilter;
-import com.project.util.JwtTokenProvider;
+import com.project.util.JwtTokenUtil;
+import com.project.util.StatelessCSRFFilter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,15 +23,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private static final Logger logger = LogManager.getLogger(UserAuthorityService.class);
 
     private UserAuthorityService userAuthorityService;
-    private final JwtTokenProvider jwtTokenProvider;
+    private final JwtTokenUtil jwtTokenUtil;
 
     @Autowired
     public SecurityConfig(UserAuthorityService userAuthorityService,
-                          JwtTokenProvider jwtTokenProvider) {
+                          JwtTokenUtil jwtTokenUtil) {
         this.userAuthorityService = userAuthorityService;
-        this.jwtTokenProvider = jwtTokenProvider;
+        this.jwtTokenUtil = jwtTokenUtil;
     }
 
     @Override
@@ -57,15 +60,60 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/user","/login").permitAll()
                 .antMatchers("/test").authenticated()
-//                .anyRequest().authenticated()   // 인증된 사용자인지 확인
                 .and()
-//                    .addFilterBefore(new CorsFilter(), UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new StatelessCSRFFilter(), UsernamePasswordAuthenticationFilter.class);
+//                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
         http.cors();
         http.csrf().disable();
+/*        http.csrf().ignoringAntMatchers("/login").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+        .and()
+        .addFilterAfter(csrfHeaderFilter(), SessionManagementFilter.class);*/
+
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Jwt 를 이용한 인증이므로 세션은 생성 안함
     }
+
+    /*private Filter csrfHeaderFilter() {
+        return new OncePerRequestFilter() {
+
+            @Override
+            protected void doFilterInternal(HttpServletRequest request,
+                                            HttpServletResponse response,
+                                            FilterChain filterChain) throws ServletException, IOException {
+
+                CsrfToken csrf = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+                logger.info("CsrfToken1 : " + csrf.getToken());
+                logger.info("referer header : " + request.getHeader("REFERER"));
+//                logger.info("cookie : " + WebUtils.getCookie(request, "XSRF-TOKEN").getValue());
+                if (csrf != null) {
+                    Cookie cookie = WebUtils.getCookie(request, "XSRF-TOKEN");
+                    if (cookie != null) {
+                        logger.info("Cookie : " + cookie.getValue());
+                    }
+                    if (request.getHeader("X-XSRF-TOKEN") != null) {
+                        logger.info("header : " + request.getHeader("X-XSRF-TOKEN"));
+                    }
+                    String token = csrf.getToken();
+                    logger.info("CsrfToken2 : " + token);
+                    if (cookie == null || token != null
+                            && !token.equals(cookie.getValue())) {
+
+                        // Token is being added to the XSRF-TOKEN cookie.
+                        cookie = new Cookie("XSRF-TOKEN", token);
+                        cookie.setPath("/user/api/v1");
+                        response.addCookie(cookie);
+                    }
+                }
+                filterChain.doFilter(request, response);
+            }
+        };
+    }
+
+    private CsrfTokenRepository csrfTokenRepository() {
+        HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
+        repository.setHeaderName("X-XSRF-TOKEN1");
+        return repository;
+    }*/
 
 
 
