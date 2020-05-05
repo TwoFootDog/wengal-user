@@ -1,6 +1,8 @@
 package com.project.config;
 
 import com.project.domain.user.service.UserAuthorityService;
+import com.project.util.JwtAuthenticationEntryPoint;
+import com.project.util.JwtAuthenticationFilter;
 import com.project.util.JwtTokenUtil;
 import com.project.util.StatelessCSRFFilter;
 import org.apache.logging.log4j.LogManager;
@@ -24,6 +26,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private static final Logger logger = LogManager.getLogger(UserAuthorityService.class);
+
+    @Autowired
+    private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
     private UserAuthorityService userAuthorityService;
     private final JwtTokenUtil jwtTokenUtil;
@@ -60,9 +65,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/user","/login").permitAll()
                 .antMatchers("/test").authenticated()
+                .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .and()
-                .addFilterBefore(new StatelessCSRFFilter(), UsernamePasswordAuthenticationFilter.class);
-//                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new StatelessCSRFFilter(), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new JwtAuthenticationFilter(authenticationManagerBean(), jwtTokenUtil), UsernamePasswordAuthenticationFilter.class);
         http.cors();
         http.csrf().disable();
 /*        http.csrf().ignoringAntMatchers("/login").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
@@ -71,6 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Jwt 를 이용한 인증이므로 세션은 생성 안함
+//        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER);
     }
 
     /*private Filter csrfHeaderFilter() {

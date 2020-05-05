@@ -11,6 +11,7 @@ import com.project.util.JwtTokenUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -28,10 +29,18 @@ import java.util.Date;
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
-//    @Value("jwt.cookieName")
-    private String jwtCookieName = "X-AUTH-TOKEN";
-
     private static final Logger logger = LogManager.getLogger(UserAccountService.class);
+
+    @Value("${jwt.accessToken.expireSecond}")
+    private long ACCESS_TOKEN_EXPIRE_SECOND ;    // access 토큰 유효시간(초)
+    @Value("${jwt.refreshToken.expireDay}")
+    private long REFRESH_TOKEN_EXPIRE_DAY ;    // refresh 토큰 유효일자
+    @Value(("${jwt.accessToken.name}"))
+    private String ACCESS_TOKEN_NAME; // X-AUTH-TOKEN
+    @Value("${cookie.expireTime}")
+    private int COOKIE_EXPIRE_TIME;
+    private static final String COOKIE_DOMAIN = "localhost";
+
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
     private final JwtTokenUtil jwtTokenUtil;
@@ -75,13 +84,14 @@ public class UserAccountServiceImpl implements UserAccountService {
         /* Session의 속성값에 SecurityContext값을 넣어줌 */
         //httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
-        /* JWT Token 생성 */
-        String jwt = jwtTokenUtil.generateToken(authentication);
+        /* JWT Access Token & refresh Token 생성 */
+        String accessToken = jwtTokenUtil.generateToken(authentication, "N", ACCESS_TOKEN_EXPIRE_SECOND);
+        String refreshToken = jwtTokenUtil.generateToken(authentication, "Y", REFRESH_TOKEN_EXPIRE_DAY*24*60*60);
 
-        /* 쿠키 생성 */
-        CookieUtil.create(response, jwtCookieName, jwt, false, -1, "localhost");
+        /* access token 용 쿠키 생성 */
+        CookieUtil.create(response, ACCESS_TOKEN_NAME, accessToken, false, COOKIE_EXPIRE_TIME, COOKIE_DOMAIN);
 
-        return getSingleResult(new LoginResult(authentication.getName(), jwt));
+        return getSingleResult(new LoginResult(authentication.getName(), refreshToken));    // response body에는 refresh token 만 보냄
     }
 
 

@@ -35,6 +35,7 @@ public class UserAuthorityServiceImpl implements UserAuthorityService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        logger.info("loadUserByUserName>>>");
         UserAccount userAccount = userAccountRepository.findByEmail(username);  // email로 계정정보 검색
         User user = new User(userAccount.getEmail(), userAccount.getPassword(), makeGrantedAuthority(userAuthorityRepository.findAllByUserAccount(userAccount)));
         return user;

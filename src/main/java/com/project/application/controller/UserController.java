@@ -26,24 +26,8 @@ public class UserController {
         this.userAccountService = userAccountService;
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<String> login(HttpServletResponse response, @RequestBody LoginRequest request, HttpSession httpSession) {
-////        CookieUtil.create(response, "aaa", "bb", false, -1, "localhost");
-//        Cookie cookie = new Cookie("name", "value");
-//        cookie.setDomain("localhost");
-//        cookie.setPath("/");        // visible all path
-//        response.addCookie(cookie);
-//        HttpHeaders httpHeaders = new HttpHeaders();
-//        return new ResponseEntity<String>("aa", httpHeaders, HttpStatus.OK);
-//    }
-
     @PostMapping("/login")
     public SingleResult<LoginResult> login(HttpServletResponse response,  @RequestBody LoginRequest request, HttpSession httpSession) {
-////        CookieUtil.create(response, "aaa", "bb", false, -1, "localhost");
-//        Cookie cookie = new Cookie("name", "value");
-//        cookie.setDomain("localhost");
-//        response.addCookie(cookie);
-//        cookie.setPath("/");        // visible all path
         return userAccountService.login(response, request, httpSession);
     }
 

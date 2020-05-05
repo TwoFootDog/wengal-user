@@ -1,11 +1,15 @@
 package com.project.util;
 
 
+import com.project.exception.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.FilterChain;
@@ -13,36 +17,69 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 //@Slf4j
-public class JwtAuthenticationFilter extends GenericFilterBean {    // Jwt가 유효한 토큰인지 인증하기 위한 Fillter
-
-    private static final String JWT_COOKIE_NAME = "X-AUTH-TOKEN";
+@Component
+public class JwtAuthenticationFilter extends BasicAuthenticationFilter {    // Jwt가 유효한 토큰인지 인증하기 위한 Fillter
 
     Logger logger = LogManager.getLogger(JwtAuthenticationFilter.class);
+//    @Value("${jwt.accessToken.name}")
+    private static final String ACCESS_TOKEN_NAME =  "X-AUTH-TOKEN"; // X-AUTH-TOKEN
+
     private final JwtTokenUtil jwtTokenUtil;
 
     @Autowired
-    public JwtAuthenticationFilter(JwtTokenUtil jwtTokenUtil) {
+    public JwtAuthenticationFilter(AuthenticationManager authenticationManager, JwtTokenUtil jwtTokenUtil) {
+        super(authenticationManager);
         this.jwtTokenUtil = jwtTokenUtil;
     }
 
+
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
+        logger.info("JWTAuthenticationFilter doFilter");
+        logger.info("access token name : " + ACCESS_TOKEN_NAME);
+        String accessToken  = jwtTokenUtil.resolveToken((HttpServletRequest)request, ACCESS_TOKEN_NAME);
+        boolean accessTokenValid = jwtTokenUtil.validateToken(accessToken);
+        if (accessToken != null && accessTokenValid) {   // access token 이 유입되었고 유효한 경우
+            Authentication authentication = jwtTokenUtil.getAuthentication(accessToken);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        } else {
+            SecurityContextHolder.getContext().setAuthentication(null);
+            logger.info("token is invalid>>>>>>> : " + accessToken);
+        }
+
+        logger.info("doFilter>>>>>>>>>>>>>>>>>>>>>>" + accessToken);
+        logger.info("ServletRequest>>>>>>>>>>>>>>>>>>>>>>" + ((HttpServletRequest) request).getHeader("X-AUTH-TOKEN"));
+
+        chain.doFilter(request, response);  // Filter를 FilterChain에 등록
+
+    }
+/*
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String token  = jwtTokenUtil.resolveToken((HttpServletRequest)request, JWT_COOKIE_NAME);
-        if (token != null && jwtTokenUtil.validateToken(token)) {
-                Authentication authentication = jwtTokenUtil.getAuthentication(token);
+        logger.info("JWTAuthenticationFilter doFilter");
+        logger.info("access token name : " + ACCESS_TOKEN_NAME);
+        String accessToken  = jwtTokenUtil.resolveToken((HttpServletRequest)request, ACCESS_TOKEN_NAME);
+        boolean accessTokenValid = jwtTokenUtil.validateToken(accessToken);
+        if (accessToken != null && accessTokenValid) {   // access token 이 유입되었고 유효한 경우
+                Authentication authentication = jwtTokenUtil.getAuthentication(accessToken);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 
         } else {
             SecurityContextHolder.getContext().setAuthentication(null);
-            logger.info("token is invalid>>>>>>> : " + token);
+            HttpServletResponse res = (HttpServletResponse) response;
+            res.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            logger.info("token is invalid>>>>>>> : " + accessToken);
         }
 
-        logger.info("doFilter>>>>>>>>>>>>>>>>>>>>>>" + token);
+        logger.info("doFilter>>>>>>>>>>>>>>>>>>>>>>" + accessToken);
         logger.info("ServletRequest>>>>>>>>>>>>>>>>>>>>>>" + ((HttpServletRequest) request).getHeader("X-AUTH-TOKEN"));
 
         chain.doFilter(request, response);  // Filter를 FilterChain에 등록
-    }
+    }*/
 }

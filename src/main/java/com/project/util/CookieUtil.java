@@ -1,5 +1,7 @@
 package com.project.util;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.WebUtils;
 
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //@Component
 public class CookieUtil {
+    private static final Logger logger = LogManager.getLogger(CookieUtil.class);
     /* 쿠키 생성 */
     public static void create(HttpServletResponse response, String name, String value, Boolean secure, Integer maxAge, String domain) {
         Cookie cookie = new Cookie(name, value);
@@ -30,7 +33,9 @@ public class CookieUtil {
     }
     /* 쿠키 조회 */
     public static String getValue(HttpServletRequest request, String name) {
+        logger.info("getvalue name : " + name);
         Cookie cookie = WebUtils.getCookie(request, name);
+        logger.info("getvalue cookie : " + cookie);
         return cookie != null ? cookie.getValue() : null;
     }
 }

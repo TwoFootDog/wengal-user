@@ -58,6 +58,7 @@ public class StatelessCSRFFilter extends OncePerRequestFilter {
     private void invalidate(HttpServletResponse response) {
         Cookie cookie = new Cookie(COOKIE_CSRF_TOKEN, "");
         cookie.setMaxAge(EXPIRE);
+        logger.info("invalidate cookie");
         response.addCookie(cookie);
     }
 
@@ -66,13 +67,16 @@ public class StatelessCSRFFilter extends OncePerRequestFilter {
         private static final String contextRoot = "/user/api/v1";
         private final Pattern allowedMethods = Pattern.compile("^(GET|HEAD|TRACE|OPTIONS)$");
         private final Pattern allowedURI = Pattern.compile(contextRoot+"/login|"+
-                                                           contextRoot+"/user1");
+                                                           contextRoot+"/user");
 
         @Override
         public boolean matches(HttpServletRequest request) {
             logger.info("request.getMethod() : " + request.getMethod());
             logger.info("request.getRequestURI() : " + request.getRequestURI());
 
+            logger.info(" matches : " + ((!allowedMethods.matcher(request.getMethod()).matches() &&
+                    !allowedURI.matcher(request.getRequestURI()).find()) ||
+                    ("PUT".equals(request.getMethod()) && request.getRequestURI().contains(contextRoot+"/user"))));
             return (!allowedMethods.matcher(request.getMethod()).matches() &&   // GET/HEAD/TRACE/OPTION 메소드가 아니고
                     !allowedURI.matcher(request.getRequestURI()).find()) ||  // /login과 /user(회원등록)이 아니거나
                     ("PUT".equals(request.getMethod()) && request.getRequestURI().contains(contextRoot+"/user"));

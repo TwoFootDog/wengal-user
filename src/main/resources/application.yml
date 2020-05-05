@@ -3,14 +3,7 @@ spring:
     active: local
 
 ---
-jwt:
-  secret: dkqjwlrkqkddpemfdjrktlsek
-  cookieName: X-AUTH-TOKEN
 
----
-logging:
-  config: classpath:log4j2.yml
----
 
 server:
   port: 8080
@@ -29,3 +22,27 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
+  redis:
+    host: 13.209.43.122
+    port: 6379
+    timeout: 1000
+    password: rkdalsrb123$
+---
+jwt:
+  secret: dkqjwlrkqkddpemfdjrktlsek
+  accessToken:
+    name: X-AUTH-TOKEN
+    expireSecond: 60 # 60초
+  refreshToken:
+    name: X-REFRESH-TOKEN
+    expireDay: 14 # 14일
+
+cookie:
+  expireTime: 60 # 60초
+
+
+
+---
+logging:
+  config: classpath:log4j2.yml
+---
