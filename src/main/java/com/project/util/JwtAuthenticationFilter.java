@@ -27,6 +27,7 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {    // J
     Logger logger = LogManager.getLogger(JwtAuthenticationFilter.class);
 //    @Value("${jwt.accessToken.name}")
     private static final String ACCESS_TOKEN_NAME =  "X-AUTH-TOKEN"; // X-AUTH-TOKEN
+    private static final String REFRESH_TOKEN_NAME = "X-REF-TOKEN";
 
     private final JwtTokenUtil jwtTokenUtil;
 
@@ -42,11 +43,16 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {    // J
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         logger.info("JWTAuthenticationFilter doFilter");
         logger.info("access token name : " + ACCESS_TOKEN_NAME);
-        String accessToken  = jwtTokenUtil.resolveToken((HttpServletRequest)request, ACCESS_TOKEN_NAME);
-        boolean accessTokenValid = jwtTokenUtil.validateToken(accessToken);
-        if (accessToken != null && accessTokenValid) {   // access token 이 유입되었고 유효한 경우
+        String accessToken  = jwtTokenUtil.resolveToken((HttpServletRequest)request, ACCESS_TOKEN_NAME, "N");
+        String refreshToken  = jwtTokenUtil.resolveToken((HttpServletRequest)request, REFRESH_TOKEN_NAME, "Y");
+        boolean isAccessTokenValid = jwtTokenUtil.validateToken(accessToken);
+        if (accessToken != null && isAccessTokenValid) {   // access token 이 유입되었고 유효한 경우
             Authentication authentication = jwtTokenUtil.getAuthentication(accessToken);
             SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        } else if(accessToken != null && !isAccessTokenValid) {
+
+        } else if(accessToken == null && ) {
 
         } else {
             SecurityContextHolder.getContext().setAuthentication(null);

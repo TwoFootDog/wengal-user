@@ -15,7 +15,8 @@ import java.io.IOException;
 
 /* OAuth2 인증 사용 시 CORS에 걸리지 않기 위해 OAuth2 토큰 인증보다 앞단계의 필터/인터셉터에서 path 검증 */
 @Component
-@Order(Ordered.HIGHEST_PRECEDENCE)
+//@Order(1)
+@Order(Ordered.HIGHEST_PRECEDENCE+1)
 public class CustomCorsFilter implements Filter {
     private static final Logger logger = LogManager.getLogger(CustomCorsFilter.class);
     @Override

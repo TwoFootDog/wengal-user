@@ -29,6 +29,7 @@ public class JwtTokenUtil { // Jwt 토큰 생성 및 검증 모듈
     private String secretKey;
 
     private static final String REFRESH_TOKEN_REDIS_KEY = "refreshToken:";
+    private static final String REFRESH_TOKEN_NAME = "X-REF-TOKEN";
 
     private final UserAuthorityService userAuthorityService;
 
@@ -43,7 +44,7 @@ public class JwtTokenUtil { // Jwt 토큰 생성 및 검증 모듈
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
     }
 
-    // Jwt 토큰 생성(access token & refresh token)
+    // Jwt 토큰 생성(access token or refresh token)
     public String generateToken(Authentication authentication, String refreshTokenYn, long expireSecond) {
         String token = null;
         Claims claims = Jwts.claims().setSubject(authentication.getName());
@@ -79,10 +80,14 @@ public class JwtTokenUtil { // Jwt 토큰 생성 및 검증 모듈
     }
 
     // 쿠키에서 token 파싱 : "X-AUTH-TOKEN : Jwt 토큰"
-    public String resolveToken(HttpServletRequest request, String jwtCookieName) {
+    public String resolveToken(HttpServletRequest request, String jwtCookieName, String refreshTokenYn) {
         log.info("resolveToken >>>>>>>>>>>>>>>>>>>>>>");
-        return CookieUtil.getValue(request, jwtCookieName);
-//        return req.getHeader("X-AUTH-TOKEN");
+        if (refreshTokenYn.equals("Y")) {
+            return request.getHeader(REFRESH_TOKEN_NAME);
+        } else {
+            return CookieUtil.getValue(request, jwtCookieName);
+        }
+
     }
     // Jwt 토큰의 유효성 + 만료일자 확인
     public boolean validateToken(String token) {
