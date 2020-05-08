@@ -37,8 +37,8 @@ public class UserAccountServiceImpl implements UserAccountService {
     private long REFRESH_TOKEN_EXPIRE_DAY ;    // refresh 토큰 유효일자
     @Value(("${jwt.accessToken.name}"))
     private String ACCESS_TOKEN_NAME; // X-AUTH-TOKEN
-    @Value("${cookie.expireTime}")
-    private int COOKIE_EXPIRE_TIME;
+    @Value("${cookie.expireSecond}")
+    private int COOKIE_EXPIRE_SECOND;
     private static final String COOKIE_DOMAIN = "localhost";
 
     private final UserAccountRepository userAccountRepository;
@@ -89,7 +89,7 @@ public class UserAccountServiceImpl implements UserAccountService {
         String refreshToken = jwtTokenUtil.generateToken(authentication, "Y", REFRESH_TOKEN_EXPIRE_DAY*24*60*60);
 
         /* access token 용 쿠키 생성 */
-        CookieUtil.create(response, ACCESS_TOKEN_NAME, accessToken, false, COOKIE_EXPIRE_TIME, COOKIE_DOMAIN);
+        CookieUtil.create(response, ACCESS_TOKEN_NAME, accessToken, false, COOKIE_EXPIRE_SECOND, COOKIE_DOMAIN);
 
         return getSingleResult(new LoginResult(authentication.getName(), refreshToken));    // response body에는 refresh token 만 보냄
     }

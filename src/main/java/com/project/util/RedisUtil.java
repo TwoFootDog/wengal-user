@@ -24,7 +24,7 @@ public enum RedisUtil {
 //    RedisUtil() {
 //        pool = new JedisPool(new JedisPoolConfig(), host, port, timeout, password);
 //    }
-    private static final String HOST = "13.125.253.182";
+    private static final String HOST = "15.164.226.112";
     private static final int PORT = 6379;
     private static final int TIMEOUT = 1000;
     private static final String PASSWORD = "rkdalsrb123$";

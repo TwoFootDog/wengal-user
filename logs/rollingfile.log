@@ -1,2 +1,2 @@
-[INFO ] 2020-05-08 00:13:14.142 [http-nio-8080-exec-1] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>null
-[INFO ] 2020-05-08 00:13:14.145 [http-nio-8080-exec-1] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-05-09 03:50:54.137 [http-nio-8080-exec-5] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-05-09 03:50:54.141 [http-nio-8080-exec-5] UserController - tesetSuccess

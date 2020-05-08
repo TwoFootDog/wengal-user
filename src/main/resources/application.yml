@@ -34,11 +34,11 @@ jwt:
     name: X-AUTH-TOKEN
     expireSecond: 60 # 60초
   refreshToken:
-    name: X-REFRESH-TOKEN
+    name: X-REF-TOKEN
     expireDay: 14 # 14일
 
 cookie:
-  expireTime: 60 # 60초
+  expireSecond: 1209600 # 60초
 
 
 
