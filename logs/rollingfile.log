@@ -1,2 +1,6 @@
-[INFO ] 2020-05-17 14:28:26.551 [http-nio-8080-exec-2] JwtAuthenticationFilter - doFilter>>>>>>>>>>>>>>>>>>>>>>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJla2ZybDI4MTVAZ21haWwuY29tIiwiYXV0aG9yaXR5IjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImlhdCI6MTU4ODk2Mzg0OX0.yBQmTaW8yrrzUXu5MkUbye21hkTsddFR_D1ZBKC6760
-[INFO ] 2020-05-17 14:28:26.554 [http-nio-8080-exec-2] JwtAuthenticationFilter - ServletRequest>>>>>>>>>>>>>>>>>>>>>>null
+[INFO ] 2020-05-23 02:21:10.364 [Test worker] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-23 02:21:10.703 [Test worker] WengalUserApplicationTests - Started WengalUserApplicationTests in 5.883 seconds (JVM running for 8.309)
+[INFO ] 2020-05-23 02:21:10.877 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2020-05-23 02:21:10.878 [SpringContextShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2020-05-23 02:21:10.881 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2020-05-23 02:21:10.924 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
