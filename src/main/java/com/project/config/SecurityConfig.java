@@ -67,9 +67,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/test").authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .and()
-                .addFilterBefore(new StatelessCSRFFilter(), UsernamePasswordAuthenticationFilter.class)
+//                .addFilterBefore(new StatelessCSRFFilter(), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new JwtAuthenticationFilter(authenticationManagerBean(), jwtTokenUtil), UsernamePasswordAuthenticationFilter.class);
-        http.cors();
+        http.cors().disable();
         http.csrf().disable();
 /*        http.csrf().ignoringAntMatchers("/login").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
         .and()

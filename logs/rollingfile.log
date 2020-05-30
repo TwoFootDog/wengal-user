@@ -1,6 +1,6 @@
-[INFO ] 2020-05-23 02:21:10.364 [Test worker] ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-[INFO ] 2020-05-23 02:21:10.703 [Test worker] WengalUserApplicationTests - Started WengalUserApplicationTests in 5.883 seconds (JVM running for 8.309)
-[INFO ] 2020-05-23 02:21:10.877 [SpringContextShutdownHook] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-[INFO ] 2020-05-23 02:21:10.878 [SpringContextShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2020-05-23 02:21:10.881 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 2020-05-23 02:21:10.924 [SpringContextShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2020-05-30 02:44:24.716 [http-nio-8080-exec-10] CookieUtil - getvalue name : CSRF_TOKEN
+[INFO ] 2020-05-30 02:44:24.723 [http-nio-8080-exec-10] CookieUtil - getvalue cookie : javax.servlet.http.Cookie@1ac76d59
+[INFO ] 2020-05-30 02:44:24.723 [http-nio-8080-exec-10] UserController - cookie info >>>>>>>>SktlbmFWbkRCZGpYNmcyNk1GbEdOc2hUc3ZDQ2JFWUE=
+[WARN ] 2020-05-30 02:44:24.947 [http-nio-8080-exec-10] SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+[ERROR] 2020-05-30 02:44:24.947 [http-nio-8080-exec-10] SqlExceptionHelper - (conn=28985) Duplicate entry 'ekfrl2819@gmail.com' for key 'UK_cy7t7x4k8c4nkbrgqxeis2ax1'
+[ERROR] 2020-05-30 02:44:24.958 [http-nio-8080-exec-10] UserAccountService - signUp >> userAuthorityRepository.save() Fail
