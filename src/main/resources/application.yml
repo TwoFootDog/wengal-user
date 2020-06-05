@@ -22,11 +22,11 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
-  redis:
-    host: 13.209.43.122
-    port: 6379
-    timeout: 1000
-    password: rkdalsrb123$
+#  redis:
+#    host: 13.209.43.122
+#    port: 6379
+#    timeout: 1000
+#    password: rkdalsrb123$
 ---
 jwt:
   secret: dkqjwlrkqkddpemfdjrktlsek
