@@ -1,4 +1,4 @@
-[ERROR] 2020-06-06 01:21:20.853 [http-nio-8080-exec-7] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/user/api/v1] threw exception [Request processing failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool] with root cause
+[ERROR] 2020-06-06 09:55:50.880 [http-nio-8080-exec-3] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/user/api/v1] threw exception [Request processing failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool] with root cause
 java.net.SocketTimeoutException: connect timed out
 	at java.net.PlainSocketImpl.waitForConnect(Native Method) ~[?:?]
 	at java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[?:?]

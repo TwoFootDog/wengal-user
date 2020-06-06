@@ -39,7 +39,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-log4j2'   // log4j2
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.3'   // log4j2
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'	// jwt
-//    compile group: 'redis.clients', name: 'jedis', version: '3.2.0'     // redis
+    compile group: 'redis.clients', name: 'jedis', version: '3.2.0'     // redis
 }
 
 test {
