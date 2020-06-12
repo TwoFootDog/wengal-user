@@ -24,7 +24,7 @@ public enum RedisUtil {
 //    RedisUtil() {
 //        pool = new JedisPool(new JedisPoolConfig(), host, port, timeout, password);
 //    }
-    private static final String HOST = "15.164.226.112";
+    private static final String HOST = "13.125.172.40";
     private static final int PORT = 6379;
     private static final int TIMEOUT = 1000;
     private static final String PASSWORD = "rkdalsrb123$";
@@ -45,12 +45,12 @@ public enum RedisUtil {
         }
     }
 
-    public long del(String key, String value) {
+    public long del(String key) {
         Jedis jedis = null;
         long delCnt = 0;
         try {
             jedis = pool.getResource();
-            delCnt = jedis.del(key, value);
+            delCnt = jedis.del(key);
             return delCnt;
         } finally {
             if (jedis != null) {

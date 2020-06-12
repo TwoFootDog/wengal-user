@@ -28,8 +28,13 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public SingleResult<LoginResult> login(HttpServletResponse response,  @RequestBody LoginRequest request, HttpSession httpSession) {
-        return userAccountService.login(response, request, httpSession);
+    public SingleResult<LoginResult> login(@RequestBody LoginRequest request, HttpServletResponse response) {
+        return userAccountService.login(request, response);
+    }
+
+    @PostMapping("/logout")
+    public CommonResult logout(HttpServletRequest request, HttpServletResponse response) {
+        return userAccountService.logout(request, response);
     }
 
     @PostMapping("/user")
@@ -40,6 +45,11 @@ public class UserController {
     @DeleteMapping("/user/{userId}")
     public SingleResult<DeleteAccountResult> deleteAccount(@PathVariable Long userId) throws Exception {
         return userAccountService.deleteAccount(userId);
+    }
+
+    @GetMapping("/refresh")
+    public CommonResult checkRefreshToken(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return userAccountService.refreshToken(request, response);
     }
 
     @GetMapping("/test")

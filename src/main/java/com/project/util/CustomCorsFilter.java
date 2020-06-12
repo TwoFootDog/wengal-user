@@ -1,6 +1,5 @@
 package com.project.util;
 
-import com.project.domain.user.service.UserAuthorityService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.core.Ordered;

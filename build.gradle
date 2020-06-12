@@ -27,19 +27,20 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 //    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    testImplementation 'org.springframework.security:spring-security-test'
+//    testImplementation 'org.springframework.security:spring-security-test'
     compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.6.0'    // mariadb
     compile 'org.springframework.boot:spring-boot-starter-log4j2'   // log4j2
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.3'   // log4j2
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'	// jwt
     compile group: 'redis.clients', name: 'jedis', version: '3.2.0'     // redis
+    compile group: 'org.mindrot', name: 'jbcrypt', version: '0.4' // 비밀번호 암호화
 }
 
 test {

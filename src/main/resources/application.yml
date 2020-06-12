@@ -23,7 +23,7 @@ spring:
     hibernate:
       ddl-auto: update
 #  redis:
-#    host: 13.209.43.122
+#    host: 13.125.172.40
 #    port: 6379
 #    timeout: 1000
 #    password: rkdalsrb123$
