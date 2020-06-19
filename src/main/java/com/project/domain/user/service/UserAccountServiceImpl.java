@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.Optional;
 
@@ -30,8 +31,6 @@ public class UserAccountServiceImpl implements UserAccountService {
 
     @Value("${jwt.accessToken.expireSecond}")
     private long ACCESS_TOKEN_EXPIRE_SECOND ;    // access 토큰 유효시간(초)
-    @Value("${jwt.refreshToken.expireDay}")
-    private long REFRESH_TOKEN_EXPIRE_DAY ;    // refresh 토큰 유효일자
     @Value(("${jwt.accessToken.name}"))
     private String ACCESS_TOKEN_NAME; // X-AUTH-TOKEN
     @Value("${cookie.expireSecond}")
@@ -41,7 +40,6 @@ public class UserAccountServiceImpl implements UserAccountService {
     private final UserAccountRepository userAccountRepository;
     private final UserAuthorityRepository userAuthorityRepository;
     private final JwtTokenUtil jwtTokenUtil;
-//    private final AuthenticationManager authenticationManager;
 
     @Autowired
     public UserAccountServiceImpl(UserAccountRepository userAccountRepository,
@@ -50,14 +48,13 @@ public class UserAccountServiceImpl implements UserAccountService {
         this.userAccountRepository = userAccountRepository;
         this.userAuthorityRepository = userAuthorityRepository;
         this.jwtTokenUtil = jwtTokenUtil;
-//        this.authenticationManager = authenticationManager;
     }
 
     /* 로그인 함수 */
     public SingleResult<LoginResult> login(LoginRequest request, HttpServletResponse response) {
         String email = request.getEmail();
         String password = request.getPassword();
-//        UserAccount userAccount = null;
+
         logger.info("Login email : " + email + ", password : " + password);
         Optional<UserAccount> userAccount = Optional.ofNullable(userAccountRepository.findByEmail(email));
         userAccount.orElseThrow(()-> new ServiceException(false, -1, "계정정보가 존재하지 않습니다"));
@@ -89,22 +86,27 @@ public class UserAccountServiceImpl implements UserAccountService {
         String refreshToken;
         try {
             /* JWT Access Token & refresh Token 생성 */
-            accessToken = jwtTokenUtil.generateToken(email, "A", ACCESS_TOKEN_EXPIRE_SECOND);
-            refreshToken = jwtTokenUtil.generateToken(email, "R", REFRESH_TOKEN_EXPIRE_DAY*24*60*60);
+            accessToken = jwtTokenUtil.generateToken(userAccount.get().getUserId(), "A", ACCESS_TOKEN_EXPIRE_SECOND);
+            // refreshToken = jwtTokenUtil.generateToken(email, "R", REFRESH_TOKEN_EXPIRE_DAY*24*60*60); 2020-06-20 refresh token은 추후 적용
             /* access token 용 쿠키 생성 */
             CookieUtil.create(response, ACCESS_TOKEN_NAME, accessToken, false, COOKIE_EXPIRE_SECOND, COOKIE_DOMAIN);
 
         } catch (Exception e) {
             throw new ServiceException(false, -1, "토큰 생성에 실패했습니다(redis 오류)");
         }
-        return getSingleResult(new LoginResult(email, refreshToken));    // response body에는 refresh token 만 보냄
+        return getSingleResult(
+                new LoginResult(
+                        userAccount.get().getUserId(),
+                        userAccount.get().getEmail(),
+                        userAccount.get().getNickname()));
+        // return getSingleResult(new LoginResult(email, refreshToken));   2020-06-20 refresh token은 추후 적용
     }
 
     /* 로그아웃 함수 */
     public CommonResult logout(HttpServletRequest request, HttpServletResponse response) {
-        String accessToken = jwtTokenUtil.getToken(request, "A");
-        String userPk = jwtTokenUtil.getUserPk(accessToken);
-        long delCnt = jwtTokenUtil.deleteRefreshToken(userPk);
+//        String accessToken = jwtTokenUtil.getToken(request, "A");
+//        String userPk = jwtTokenUtil.getUserPk(accessToken);
+        // long delCnt = jwtTokenUtil.deleteRefreshToken(userPk); 2020-06-20 refresh token은 추후 적용
         CookieUtil.clear(response, ACCESS_TOKEN_NAME); // access token 쿠키 삭제
 
         CommonResult commonResult = new CommonResult();
@@ -114,8 +116,7 @@ public class UserAccountServiceImpl implements UserAccountService {
 
 
     /* 회원 등록 함수 */
-    public SingleResult<SignUpResult> signUp(SignUpRequest request) throws Exception {
-//        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();    // 패스워드 인코더
+    public SingleResult<SignUpResult> signUp(SignUpRequest request, HttpServletResponse response) throws Exception {
         SingleResult<SignUpResult> result;
         UserAccount userAccount = new UserAccount(
                 request.getEmail(),
@@ -128,32 +129,49 @@ public class UserAccountServiceImpl implements UserAccountService {
         try {
             UserAuthority userAuthority = userAuthorityRepository   // user 및 권한 등록
                     .save(new UserAuthority(userAccount, "USER", "signup", new Date(), "signup", new Date()));
-            result = getSingleResult(new SignUpResult(userAuthority.getUserAccount().getEmail(), userAuthority.getUserAccount().getNickname()));    // 단건 결과파일 생성
+            result = getSingleResult(
+                    new SignUpResult(
+                            userAuthority.getUserAccount().getUserId(),
+                            userAuthority.getUserAccount().getEmail(),
+                            userAuthority.getUserAccount().getNickname()));    // 단건 결과파일 생성
+
+            String accessToken = jwtTokenUtil.generateToken(userAuthority.getUserAccount().getUserId(), "A", ACCESS_TOKEN_EXPIRE_SECOND);
+            CookieUtil.create(response, ACCESS_TOKEN_NAME, accessToken, false, COOKIE_EXPIRE_SECOND, COOKIE_DOMAIN);    // access token 생성 후 쿠키 저장
+
         } catch (Exception e) {
             logger.error("signUp >> userAuthorityRepository.save() Fail");
             throw new ServiceException(false, -1, "회원가입에 실패했습니다.", e);
         }
-        logger.info("signUp Success. userId : " + userAccount.getId() + ", email : " + userAccount.getEmail() + ", nickName : " + userAccount.getNickname());
+        logger.info("signUp Success. userId : " + userAccount.getUserId() + ", email : " + userAccount.getEmail() + ", nickName : " + userAccount.getNickname());
         return result;
     }
 
     /* 회원 탈회 함수 */
-    public SingleResult<DeleteAccountResult> deleteAccount(Long userId) throws Exception {
+    @Transactional
+    public SingleResult<DeleteAccountResult> deleteAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String accessToken = jwtTokenUtil.getToken(request, "A");
+        String userPk = jwtTokenUtil.getUserPk(accessToken);
+        CookieUtil.clear(response, ACCESS_TOKEN_NAME); // access token 쿠키 삭제
+
         SingleResult<DeleteAccountResult> result;
         try {
-            userAccountRepository.deleteById(userId);
-            result = getSingleResult(new DeleteAccountResult(userId));
+            int cnt = userAuthorityRepository.deleteByUserAccount(userAccountRepository.findByUserId(userPk));
+//            int cnt = userAccountRepository.deleteByUserId(userPk);
+            result = getSingleResult(new DeleteAccountResult(userPk, cnt));
         } catch (Exception e) {
-            logger.error("deleteAccount >> userRepository.deleteById Fail. userId : " + userId);
+            e.printStackTrace();
+            logger.error("deleteAccount >> userRepository.deleteById Fail. userId : " + userPk);
             throw new ServiceException(false, -1, "탈회에 실패했습니다.", e);
         }
-        logger.error("deleteAccount Success. userId : " + userId);
+        logger.error("deleteAccount Success. userId : " + userPk);
         return result;
     }
 
-    /* 회원 refresh token 체크 함수 */
-    // refresh token 이 유효하면 access token 재발급
-    // refresh token 이 유효하지 않으면 에러
+    /* 2020-06-20 refresh token 로직은 추후 적용 */
+    /* 회원 refresh token 체크 함수
+    refresh token 이 유효하면 access token 재발급
+    refresh token 이 유효하지 않으면 에러 */
     public CommonResult refreshToken(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String accessToken = jwtTokenUtil.getToken(request, "A");
         String refreshToken = jwtTokenUtil.getToken(request, "R");

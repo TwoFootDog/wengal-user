@@ -9,8 +9,8 @@ import javax.servlet.http.HttpSession;
 public interface UserAccountService {
     public SingleResult<LoginResult> login(LoginRequest request, HttpServletResponse response);
     public CommonResult logout(HttpServletRequest request, HttpServletResponse response);
-    public SingleResult<SignUpResult> signUp(SignUpRequest request) throws Exception;
-    public SingleResult<DeleteAccountResult> deleteAccount(Long userId) throws Exception;
+    public SingleResult<SignUpResult> signUp(SignUpRequest request, HttpServletResponse response) throws Exception;
+    public SingleResult<DeleteAccountResult> deleteAccount(HttpServletRequest request, HttpServletResponse response) throws Exception;
     public CommonResult refreshToken(HttpServletRequest request, HttpServletResponse response) throws Exception;
 //    public <T> SingleResult<T> getSingleResult(T data);
 //    void setSuccessResult(CommonResult result);

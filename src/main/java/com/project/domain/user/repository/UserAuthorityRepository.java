@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface UserAuthorityRepository extends CrudRepository <UserAuthority, Long> {
     public List<UserAuthority> findAllByUserAccount(UserAccount userAccount);
+    public int deleteByUserAccount(UserAccount userAccount);
 }

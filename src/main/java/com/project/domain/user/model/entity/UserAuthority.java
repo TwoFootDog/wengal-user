@@ -12,14 +12,14 @@ import java.util.Date;
 
 @Entity
 @Table(name = "usr_auth_mst",
-        uniqueConstraints = {@UniqueConstraint(columnNames = {"usr_acct_id", "auth_name"})})   // 유저 권한 테이블
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "auth_name"})})   // 유저 권한 테이블
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserAuthority extends AbstractEntity implements AggregateRoot {
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "usr_acct_id")
+    @JoinColumn(name = "user_id")
     private UserAccount userAccount;
 
     @Column(name = "auth_name", length = 20)
