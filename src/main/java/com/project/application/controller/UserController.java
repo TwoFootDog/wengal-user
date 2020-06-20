@@ -38,15 +38,16 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public SingleResult<SignUpResult> signUp(@RequestBody SignUpRequest request) throws Exception {
-        return userAccountService.signUp(request);
+    public SingleResult<SignUpResult> signUp(@RequestBody SignUpRequest request, HttpServletResponse response) throws Exception {
+        return userAccountService.signUp(request, response);
     }
 
-    @DeleteMapping("/user/{userId}")
-    public SingleResult<DeleteAccountResult> deleteAccount(@PathVariable Long userId) throws Exception {
-        return userAccountService.deleteAccount(userId);
+    @DeleteMapping("/user")
+    public SingleResult<DeleteAccountResult> deleteAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return userAccountService.deleteAccount(request, response);
     }
 
+    /* Refresh Token 사용 시 Refresh Token으로 Access Token을 발급받는 서비스 */
     @GetMapping("/refresh")
     public CommonResult checkRefreshToken(HttpServletRequest request, HttpServletResponse response) throws Exception {
         return userAccountService.refreshToken(request, response);

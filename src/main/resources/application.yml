@@ -33,9 +33,9 @@ jwt:
   accessToken:
     name: X-AUTH-TOKEN
     expireSecond: 60 # 60초
-  refreshToken:
-    name: X-REF-TOKEN
-    expireDay: 14 # 14일
+#  refreshToken: # 2020-06-20 refresh token은 추후 적용
+#    name: X-REF-TOKEN
+#    expireDay: 14 # 14일
 
 cookie:
   expireSecond: 1209600 # 60초

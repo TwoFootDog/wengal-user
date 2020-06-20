@@ -22,7 +22,7 @@ import java.util.Date;
 public class UserInfo extends AbstractEntity {
 
     @Column(name = "user_id")
-    private Long userId;        // 회원id
+    protected String userId;       // 회원id
 
     @Column(name = " user_info_code", nullable = true, length = 3)
     private String userInfoCode;    // 회원정보코드(AGE, SEX, EDU, BIR, CTY)

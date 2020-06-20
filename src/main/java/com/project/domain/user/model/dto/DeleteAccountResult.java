@@ -7,5 +7,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class DeleteAccountResult {
-    private Long userId;
+    private String userId;
+    private int cnt;
 }
