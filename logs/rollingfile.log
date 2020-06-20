@@ -1,1 +1,5 @@
-[INFO ] 2020-06-13 02:40:39.675 [http-nio-8080-exec-5] JwtTokenUtil - getUserPk >>>>>>>>>>>>>>>>>>>>>>
+[INFO ] 2020-06-20 10:34:09.951 [main] WengalUserApplication - Started WengalUserApplication in 5.95 seconds (JVM running for 9.286)
+[INFO ] 2020-06-20 10:34:24.632 [http-nio-8080-exec-1] [/user/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2020-06-20 10:34:24.632 [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2020-06-20 10:34:24.641 [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2020-06-20 10:34:24.664 [http-nio-8080-exec-1] UserController - tesetSuccess
